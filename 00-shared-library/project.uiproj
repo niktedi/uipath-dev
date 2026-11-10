@@ -1,0 +1,6 @@
+{
+  "Name": "UipathDev.Shared",
+  "ProjectType": "Library",
+  "Description": "Shared components for uipath-dev processes: validation, VAT white list, NBP rates, Google Workspace helpers, notifications, logging",
+  "MainFile": "NewActivity.xaml"
+}

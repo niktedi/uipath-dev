@@ -1,4 +1,7 @@
-**/.local/
-**/.objects/
-**/.screenshots/
-**/.tmh/
+.local/
+*.nupkg
+*.log
+~$*
+.vs/
+Thumbs.db
+desktop.ini
