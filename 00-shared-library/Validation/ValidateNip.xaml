@@ -109,7 +109,7 @@
           <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
             <ui:AssignOperation.To>
               <OutArgument x:TypeArguments="x:String">
-                <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_1">in_Nip</CSharpReference>
+                <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_11">out_Reason</CSharpReference>
               </OutArgument>
             </ui:AssignOperation.To>
             <ui:AssignOperation.Value>
