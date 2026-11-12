@@ -4,6 +4,7 @@
   "description": "Shared components for uipath-dev processes: validation, VAT white list, NBP rates, Google Workspace helpers, notifications, logging",
   "main": "NewActivity.xaml",
   "dependencies": {
+    "UiPath.GSuite.Activities": "3.12.10",
     "UiPath.System.Activities": "26.10.0",
     "UiPath.WebAPI.Activities": "2.5.2"
   },
@@ -34,7 +35,10 @@
     "projectProfile": "Developement",
     "outputType": "Library",
     "libraryOptions": {
-      "privateWorkflows": []
+      "privateWorkflows": [
+        "Tests/SheetsReadTable_Smoke.xaml",
+        "Tests/LogBusinessEvent_Smoke.xaml"
+      ]
     },
     "processOptions": {
       "ignoredFiles": []
