@@ -1,0 +1,21 @@
+{
+  "DisplayName": "SheetsUpsertByKey_Smoke",
+  "Tooltip": null,
+  "HelpLink": null,
+  "Color": null,
+  "OriginalIconFileName": null,
+  "Arguments": [
+    {
+      "Name": "SheetsUpsertByKey__Write_Range",
+      "DisplayName": "uipath-google-sheets",
+      "Category": null,
+      "Tooltip": "Write Range",
+      "Placeholder": null,
+      "Widget": "Connection",
+      "IsRequired": true,
+      "IsPrincipal": true,
+      "ArgumentType": 1,
+      "DataSourceItems": null
+    }
+  ]
+}

@@ -263,7 +263,7 @@
                         </Assign.To>
                         <Assign.Value>
                           <InArgument x:TypeArguments="x:Boolean">
-                            <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_11" xml:space="preserve">(baseEx is Google.GoogleApiException
+                            <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_20" xml:space="preserve">(baseEx is Google.GoogleApiException
    &amp;&amp; ((int)((Google.GoogleApiException)baseEx).HttpStatusCode == 429
        || (int)((Google.GoogleApiException)baseEx).HttpStatusCode &gt;= 500))
 || baseEx is System.Net.Http.HttpRequestException

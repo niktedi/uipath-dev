@@ -1,0 +1,93 @@
+{
+  "DisplayName": "SheetsUpsertByKey",
+  "Tooltip": null,
+  "HelpLink": null,
+  "Color": null,
+  "OriginalIconFileName": null,
+  "Arguments": [
+    {
+      "Name": "in_SpreadsheetId",
+      "DisplayName": "in_SpreadsheetId",
+      "Category": null,
+      "Tooltip": null,
+      "Placeholder": null,
+      "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": true,
+      "ArgumentType": 0,
+      "DataSourceItems": null
+    },
+    {
+      "Name": "in_SheetName",
+      "DisplayName": "in_SheetName",
+      "Category": null,
+      "Tooltip": null,
+      "Placeholder": null,
+      "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": true,
+      "ArgumentType": 0,
+      "DataSourceItems": null
+    },
+    {
+      "Name": "in_KeyColumn",
+      "DisplayName": "in_KeyColumn",
+      "Category": null,
+      "Tooltip": null,
+      "Placeholder": null,
+      "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": true,
+      "ArgumentType": 0,
+      "DataSourceItems": null
+    },
+    {
+      "Name": "in_Data",
+      "DisplayName": "in_Data",
+      "Category": null,
+      "Tooltip": null,
+      "Placeholder": null,
+      "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": true,
+      "ArgumentType": 0,
+      "DataSourceItems": null
+    },
+    {
+      "Name": "out_RowsUpdated",
+      "DisplayName": "out_RowsUpdated",
+      "Category": null,
+      "Tooltip": null,
+      "Placeholder": null,
+      "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": true,
+      "ArgumentType": 0,
+      "DataSourceItems": null
+    },
+    {
+      "Name": "out_RowsInserted",
+      "DisplayName": "out_RowsInserted",
+      "Category": null,
+      "Tooltip": null,
+      "Placeholder": null,
+      "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": true,
+      "ArgumentType": 0,
+      "DataSourceItems": null
+    },
+    {
+      "Name": "Write_Range",
+      "DisplayName": "uipath-google-sheets",
+      "Category": null,
+      "Tooltip": "Write Range",
+      "Placeholder": null,
+      "Widget": "Connection",
+      "IsRequired": true,
+      "IsPrincipal": true,
+      "ArgumentType": 1,
+      "DataSourceItems": null
+    }
+  ]
+}
