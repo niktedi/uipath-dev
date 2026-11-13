@@ -87,7 +87,7 @@
       <AssemblyReference>System.Linq.Queryable</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="SheetsReadTable_Smoke" sap:VirtualizedContainerService.HintSize="750,540" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="SheetsReadTable_Smoke" sap:VirtualizedContainerService.HintSize="738,540" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="dt_Data" />
       <Variable x:TypeArguments="x:String" Name="sheetId" />
@@ -107,7 +107,9 @@
     </ui:GetRobotAsset>
     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" DisplayName="SheetsReadTable - Invoke Workflow File (Google\SheetsReadTable.xaml)" sap:VirtualizedContainerService.HintSize="449.6,176" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Google\SheetsReadTable.xaml">
       <ui:InvokeWorkflowFile.Arguments>
-        <InArgument x:TypeArguments="x:String" x:Key="in_SpreadsheetId" />
+        <InArgument x:TypeArguments="x:String" x:Key="in_SpreadsheetId">
+          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_7">sheetId</CSharpValue>
+        </InArgument>
         <InArgument x:TypeArguments="x:String" x:Key="in_SheetName">Data</InArgument>
         <InArgument x:TypeArguments="x:String" x:Key="in_Range" />
         <InArgument x:TypeArguments="x:Boolean" x:Key="in_HasHeaders" />

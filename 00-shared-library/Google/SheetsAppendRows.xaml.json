@@ -1,0 +1,69 @@
+{
+  "DisplayName": "SheetsAppendRows",
+  "Tooltip": null,
+  "HelpLink": null,
+  "Color": null,
+  "OriginalIconFileName": null,
+  "Arguments": [
+    {
+      "Name": "in_SpreadsheetId",
+      "DisplayName": "in_SpreadsheetId",
+      "Category": null,
+      "Tooltip": null,
+      "Placeholder": null,
+      "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": true,
+      "ArgumentType": 0,
+      "DataSourceItems": null
+    },
+    {
+      "Name": "in_SheetName",
+      "DisplayName": "in_SheetName",
+      "Category": null,
+      "Tooltip": null,
+      "Placeholder": null,
+      "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": true,
+      "ArgumentType": 0,
+      "DataSourceItems": null
+    },
+    {
+      "Name": "in_Data",
+      "DisplayName": "in_Data",
+      "Category": null,
+      "Tooltip": null,
+      "Placeholder": null,
+      "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": true,
+      "ArgumentType": 0,
+      "DataSourceItems": null
+    },
+    {
+      "Name": "out_RowsAppended",
+      "DisplayName": "out_RowsAppended",
+      "Category": null,
+      "Tooltip": null,
+      "Placeholder": null,
+      "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": true,
+      "ArgumentType": 0,
+      "DataSourceItems": null
+    },
+    {
+      "Name": "Write_Range",
+      "DisplayName": "uipath-google-sheets",
+      "Category": null,
+      "Tooltip": "Write Range",
+      "Placeholder": null,
+      "Widget": "Connection",
+      "IsRequired": true,
+      "IsPrincipal": true,
+      "ArgumentType": 1,
+      "DataSourceItems": null
+    }
+  ]
+}

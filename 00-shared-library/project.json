@@ -37,7 +37,8 @@
     "libraryOptions": {
       "privateWorkflows": [
         "Tests/SheetsReadTable_Smoke.xaml",
-        "Tests/LogBusinessEvent_Smoke.xaml"
+        "Tests/LogBusinessEvent_Smoke.xaml",
+        "Tests/SheetsAppendRows_Smoke.xaml"
       ]
     },
     "processOptions": {
