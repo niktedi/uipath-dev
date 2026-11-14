@@ -1,0 +1,33 @@
+{
+  "DisplayName": "DocsRenderTemplate_Smoke",
+  "Tooltip": null,
+  "HelpLink": null,
+  "Color": null,
+  "OriginalIconFileName": null,
+  "Arguments": [
+    {
+      "Name": "DocsRenderTemplate__Read_Text",
+      "DisplayName": "uipath-google-docs",
+      "Category": null,
+      "Tooltip": "Read Text",
+      "Placeholder": null,
+      "Widget": "Connection",
+      "IsRequired": true,
+      "IsPrincipal": true,
+      "ArgumentType": 1,
+      "DataSourceItems": null
+    },
+    {
+      "Name": "DocsRenderTemplate__Copy_File",
+      "DisplayName": "uipath-google-drive",
+      "Category": null,
+      "Tooltip": "Copy File",
+      "Placeholder": null,
+      "Widget": "Connection",
+      "IsRequired": true,
+      "IsPrincipal": true,
+      "ArgumentType": 1,
+      "DataSourceItems": null
+    }
+  ]
+}
