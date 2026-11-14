@@ -1,0 +1,33 @@
+{
+  "DisplayName": "SendGmail_Smoke",
+  "Tooltip": null,
+  "HelpLink": null,
+  "Color": null,
+  "OriginalIconFileName": null,
+  "Arguments": [
+    {
+      "Name": "SendGmail__Get_File_or_Folder",
+      "DisplayName": "uipath-google-drive",
+      "Category": null,
+      "Tooltip": "Get File or Folder",
+      "Placeholder": null,
+      "Widget": "Connection",
+      "IsRequired": true,
+      "IsPrincipal": true,
+      "ArgumentType": 1,
+      "DataSourceItems": null
+    },
+    {
+      "Name": "SendGmail__Send_Email",
+      "DisplayName": "uipath-google-gmail",
+      "Category": null,
+      "Tooltip": "Send Email",
+      "Placeholder": null,
+      "Widget": "Connection",
+      "IsRequired": true,
+      "IsPrincipal": true,
+      "ArgumentType": 1,
+      "DataSourceItems": null
+    }
+  ]
+}
