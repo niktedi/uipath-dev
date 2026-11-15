@@ -1,0 +1,21 @@
+Case,DevSet,RequestedBy,VendorName,Country,Nip,VatId,Iban,ExpectedResult,Note
+1,yes,uibot778+anna@gmail.com,ORLEN S.A.,PL,7740001454,,30102010260000140203550589,OK,Happy path: VAT active; account on the white list (vendor also has virtual accounts)
+2,,uibot778+marek@gmail.com,PZU SA,PL,5260251049,,,BLOCK,White list status Niezarejestrowany (NotRegistered)
+3,,uibot778+ewa@gmail.com,CD PROJEKT S.A.,PL,734-286-71-48,,PL49 1140 1010 0000 4186 3700 1001,OK,"Normalization of NIP and IBAN; official name is CD PROJEKT RED SPOLKA AKCYJNA"
+4,,uibot778+tom@gmail.com,Bank Pekao,PL,PL5260006841,,,WARNING,NIP with PL prefix; IBAN not provided (Pekao has no accounts on the white list)
+5,,uibot778+kasia@gmail.com,PKO Bank Polski,PL,5250007738,,17105000861000009030362629,OK or WARNING,Fuzzy name boundary: official name POWSZECHNA KASA OSZCZEDNOSCI BANK POLSKI
+6,,uibot778+anna@gmail.com,KGHM Polska Miedź S.A.,PL,6920000013,,,WARNING,IBAN not provided
+7,,uibot778+marek@gmail.com,Orlen Paliwa,PL,5260250995,,58103015080000000503131332,WARNING,Name mismatch: NIP and account belong to ORANGE POLSKA
+8,yes,uibot778+ewa@gmail.com,Allegro.pl,PL,5252674798,,PL61109010140000071219812874,BLOCK,Account not on the white list; vendor has virtual accounts so the check endpoint is called
+9,,uibot778+tom@gmail.com,Test Vendor,PL,1234567883,,,BLOCK,Valid checksum but not found in the white list (NotFound)
+10,yes,uibot778+kasia@gmail.com,Typo Vendor,PL,7740001455,,,BLOCK,Invalid input: NIP checksum
+11,,uibot778+anna@gmail.com,Short NIP,PL,77400014,,,BLOCK,Invalid input: NIP length
+12,,uibot778+marek@gmail.com,ORLEN S.A.,PL,7740001454,,PL62109010140000071219812874,BLOCK,Invalid input: IBAN checksum
+13,,uibot778+ewa@gmail.com,No NIP Ltd,PL,,,,BLOCK,Invalid input: NIP missing for a Polish vendor
+14,,uibot778+tom@gmail.com,ORLEN SA,PL,7740001454,,38124052821111001080047440,OK,Repeat of case 1 by another requester with another listed account: Register row is updated not duplicated
+15,yes,uibot778+kasia@gmail.com,Google Ireland,IE,,IE6388047V,,OK,VIES valid; VIES name GOOGLE IRELAND LIMITED
+16,,uibot778+anna@gmail.com,Amazon EU,LU,,LU26375245,,OK or WARNING,VIES valid; fuzzy boundary against AMAZON EUROPE CORE S.A R.L.
+17,,uibot778+marek@gmail.com,SAP SE,DE,,DE143454214,,WARNING,VIES valid but Germany returns no name so the name cannot be verified
+18,,uibot778+ewa@gmail.com,Fake GmbH,DE,,DE000000000,,BLOCK,VIES invalid
+19,,uibot778+tom@gmail.com,No VAT SARL,FR,,,,BLOCK,Invalid input: VAT ID missing for an EU vendor
+20,,uibot778+kasia@gmail.com,Mismatch BV,NL,,BE0403170701,,BLOCK,Invalid input: VAT ID prefix BE does not match country NL
