@@ -1,0 +1,69 @@
+{
+  "DisplayName": "ValidateNip_Test",
+  "Tooltip": null,
+  "HelpLink": null,
+  "Color": null,
+  "OriginalIconFileName": null,
+  "Arguments": [
+    {
+      "Name": "in_CaseName",
+      "DisplayName": "in_CaseName",
+      "Category": null,
+      "Tooltip": null,
+      "Placeholder": "ValidPlain",
+      "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": true,
+      "ArgumentType": 0,
+      "DataSourceItems": null
+    },
+    {
+      "Name": "in_Nip",
+      "DisplayName": "in_Nip",
+      "Category": null,
+      "Tooltip": null,
+      "Placeholder": "7740001454",
+      "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": true,
+      "ArgumentType": 0,
+      "DataSourceItems": null
+    },
+    {
+      "Name": "in_ExpectedIsValid",
+      "DisplayName": "in_ExpectedIsValid",
+      "Category": null,
+      "Tooltip": null,
+      "Placeholder": "True",
+      "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": true,
+      "ArgumentType": 0,
+      "DataSourceItems": null
+    },
+    {
+      "Name": "in_ExpectedNormalizedNip",
+      "DisplayName": "in_ExpectedNormalizedNip",
+      "Category": null,
+      "Tooltip": null,
+      "Placeholder": "7740001454",
+      "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": true,
+      "ArgumentType": 0,
+      "DataSourceItems": null
+    },
+    {
+      "Name": "in_ExpectedReason",
+      "DisplayName": "in_ExpectedReason",
+      "Category": null,
+      "Tooltip": null,
+      "Placeholder": "OK",
+      "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": true,
+      "ArgumentType": 0,
+      "DataSourceItems": null
+    }
+  ]
+}

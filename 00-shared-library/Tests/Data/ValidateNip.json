@@ -1,0 +1,13 @@
+[
+  { "in_CaseName": "ValidPlain",         "in_Nip": "7740001454",    "in_ExpectedIsValid": "True",  "in_ExpectedNormalizedNip": "7740001454",  "in_ExpectedReason": "OK" },
+  { "in_CaseName": "ValidRemainderZero", "in_Nip": "1100000000",    "in_ExpectedIsValid": "True",  "in_ExpectedNormalizedNip": "1100000000",  "in_ExpectedReason": "OK" },
+  { "in_CaseName": "ValidHyphens",       "in_Nip": "774-000-14-54", "in_ExpectedIsValid": "True",  "in_ExpectedNormalizedNip": "7740001454",  "in_ExpectedReason": "OK" },
+  { "in_CaseName": "ValidSpaces",        "in_Nip": "774 000 14 54", "in_ExpectedIsValid": "True",  "in_ExpectedNormalizedNip": "7740001454",  "in_ExpectedReason": "OK" },
+  { "in_CaseName": "ValidPlPrefix",      "in_Nip": "PL7740001454",  "in_ExpectedIsValid": "True",  "in_ExpectedNormalizedNip": "7740001454",  "in_ExpectedReason": "OK" },
+  { "in_CaseName": "BadChecksum",        "in_Nip": "7740001455",    "in_ExpectedIsValid": "False", "in_ExpectedNormalizedNip": "7740001455",  "in_ExpectedReason": "Invalid checksum" },
+  { "in_CaseName": "RemainderTen",       "in_Nip": "0200000000",    "in_ExpectedIsValid": "False", "in_ExpectedNormalizedNip": "0200000000",  "in_ExpectedReason": "Invalid checksum" },
+  { "in_CaseName": "TooShort",           "in_Nip": "774000145",     "in_ExpectedIsValid": "False", "in_ExpectedNormalizedNip": "774000145",   "in_ExpectedReason": "NIP must contain exactly 10 digits" },
+  { "in_CaseName": "TooLong",            "in_Nip": "77400014540",   "in_ExpectedIsValid": "False", "in_ExpectedNormalizedNip": "77400014540", "in_ExpectedReason": "NIP must contain exactly 10 digits" },
+  { "in_CaseName": "Empty",              "in_Nip": "",              "in_ExpectedIsValid": "False", "in_ExpectedNormalizedNip": "",            "in_ExpectedReason": "NIP must contain exactly 10 digits" },
+  { "in_CaseName": "FullwidthDigits",    "in_Nip": "７７４０００１４５４", "in_ExpectedIsValid": "False", "in_ExpectedNormalizedNip": "", "in_ExpectedReason": "NIP must contain exactly 10 digits" }
+]
