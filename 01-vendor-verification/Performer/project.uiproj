@@ -1,0 +1,6 @@
+{
+  "Name": "UipathDev.VendorVerification.Performer",
+  "ProjectType": "Process",
+  "Description": "Verifies vendors from VV_VerificationQueue against VAT White List, VIES and GUS REGON.",
+  "MainFile": "Main.xaml"
+}

@@ -1,0 +1,6 @@
+{
+  "Name": "UipathDev.VendorVerification.Dispatcher",
+  "ProjectType": "Process",
+  "Description": "Reads vendor verification requests from the Google Form and adds them to VV_VerificationQueue.",
+  "MainFile": "Main.xaml"
+}

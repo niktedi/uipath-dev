@@ -5,3 +5,10 @@
 .vs/
 Thumbs.db
 desktop.ini
+# REFramework runtime output (keep placeholder.txt)
+**/Exceptions_Screenshots/*
+!**/Exceptions_Screenshots/placeholder.txt
+**/Data/Temp/*
+!**/Data/Temp/placeholder.txt
+**/Data/Output/*
+!**/Data/Output/placeholder.txt
