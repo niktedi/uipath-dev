@@ -3,6 +3,10 @@
     {
       "filePath": ".variations\\ValidateNip.json",
       "dataVariationType": "File"
+    },
+    {
+      "filePath": ".variations\\ValidateIban.json",
+      "dataVariationType": "File"
     }
   ]
 }

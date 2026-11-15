@@ -1,0 +1,12 @@
+[
+  { "in_CaseName": "ValidPl",          "in_Iban": "PL61109010140000071219812874",       "in_ExpectedIsValid": "True",  "in_ExpectedNormalizedIban": "PL61109010140000071219812874", "in_ExpectedReason": "OK" },
+  { "in_CaseName": "ValidDe",          "in_Iban": "DE89370400440532013000",             "in_ExpectedIsValid": "True",  "in_ExpectedNormalizedIban": "DE89370400440532013000",       "in_ExpectedReason": "OK" },
+  { "in_CaseName": "ValidGbLetters",   "in_Iban": "GB29NWBK60161331926819",             "in_ExpectedIsValid": "True",  "in_ExpectedNormalizedIban": "GB29NWBK60161331926819",       "in_ExpectedReason": "OK" },
+  { "in_CaseName": "ValidNoPrefix",    "in_Iban": "61109010140000071219812874",         "in_ExpectedIsValid": "True",  "in_ExpectedNormalizedIban": "PL61109010140000071219812874", "in_ExpectedReason": "OK" },
+  { "in_CaseName": "ValidFormatted",   "in_Iban": "pl61 1090-1014 0000 0712 1981 2874", "in_ExpectedIsValid": "True",  "in_ExpectedNormalizedIban": "PL61109010140000071219812874", "in_ExpectedReason": "OK" },
+  { "in_CaseName": "BadChecksum",      "in_Iban": "PL62109010140000071219812874",       "in_ExpectedIsValid": "False", "in_ExpectedNormalizedIban": "PL62109010140000071219812874", "in_ExpectedReason": "Invalid checksum" },
+  { "in_CaseName": "WrongLength",      "in_Iban": "PL6110901014000007121981287",        "in_ExpectedIsValid": "False", "in_ExpectedNormalizedIban": "PL6110901014000007121981287",  "in_ExpectedReason": "IBAN for PL must be 28 characters" },
+  { "in_CaseName": "UnknownCountry",   "in_Iban": "XX61109010140000071219812874",       "in_ExpectedIsValid": "False", "in_ExpectedNormalizedIban": "XX61109010140000071219812874", "in_ExpectedReason": "Unsupported country: XX" },
+  { "in_CaseName": "TwentyFiveDigits", "in_Iban": "6110901014000007121981287",          "in_ExpectedIsValid": "False", "in_ExpectedNormalizedIban": "6110901014000007121981287",    "in_ExpectedReason": "Invalid IBAN format" },
+  { "in_CaseName": "Empty",            "in_Iban": "",                                   "in_ExpectedIsValid": "False", "in_ExpectedNormalizedIban": "",                             "in_ExpectedReason": "Invalid IBAN format" }
+]

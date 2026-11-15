@@ -56,6 +56,14 @@
         "testCaseType": "TestCase",
         "executionTemplateInvokeIsolated": false,
         "fileName": "Tests\\ValidateNip_Test.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "0e04d397-02db-49ca-afbe-651cbe920958",
+        "dataVariationFilePath": ".variations\\ValidateIban.json",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "Tests\\ValidateIban_Test.xaml"
       }
     ],
     "saveToCloud": false
