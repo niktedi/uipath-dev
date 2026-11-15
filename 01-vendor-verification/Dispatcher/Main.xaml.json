@@ -1,0 +1,21 @@
+{
+  "DisplayName": "Main",
+  "Tooltip": null,
+  "HelpLink": null,
+  "Color": null,
+  "OriginalIconFileName": null,
+  "Arguments": [
+    {
+      "Name": "in_LookbackDays",
+      "DisplayName": "in_LookbackDays",
+      "Category": null,
+      "Tooltip": null,
+      "Placeholder": "7",
+      "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": true,
+      "ArgumentType": 0,
+      "DataSourceItems": null
+    }
+  ]
+}

@@ -4,7 +4,20 @@
     {
       "filePath": "Main.xaml",
       "uniqueId": "4bc7c563-c6d6-43af-8cb3-ed77d6c3d0cf",
-      "type": "process"
+      "type": "process",
+      "input": {
+        "type": "object",
+        "properties": {
+          "in_LookbackDays": {
+            "type": "integer",
+            "minimum": -2147483648,
+            "maximum": 2147483647,
+            "x-default-expression": "7",
+            "default": 7
+          }
+        },
+        "required": []
+      }
     }
   ]
 }
