@@ -13,6 +13,7 @@
     "LogMessage_ApplicationException": "System exception.",
     "ExceptionMessage_ConsecutiveErrors": "The maximum number of consecutive system exceptions was reached. ",
     "RetryNumberGetTransactionItem": 2,
+	"RegonServiceUrl": "https://wyszukiwarkaregontest.stat.gov.pl/wsBIR/UslugaBIRzewnPubl.svc",
     "RetryNumberSetTransactionStatus": 2,
     "ShouldMarkJobAsFaulted": true
   }

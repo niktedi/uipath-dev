@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="InitAllSettings" this:InitAllSettings.in_ConfigFile="Data\Config.json" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.Collections;assembly=System.Private.CoreLib" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="InitAllSettings" this:InitAllSettings.in_ConfigFile="Data\Config.json" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.Collections;assembly=System.Private.CoreLib" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ss="clr-namespace:System.Security;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property sap2010:Annotation.AnnotationText="Dictionary structure to store configuration data of the process (settings and constants)." Name="out_Config" Type="OutArgument(scg:Dictionary(x:String, x:Object))" />
     <x:Property sap2010:Annotation.AnnotationText="Path to the JSON configuration file that defines settings and constants." Name="in_ConfigFile" Type="InArgument(x:String)" />
@@ -36,6 +36,7 @@
       <x:String>UiPath.Core.Activities</x:String>
       <x:String>GlobalVariablesNamespace</x:String>
       <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Security</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -86,9 +87,10 @@
       <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
       <AssemblyReference>NPOI.Core</AssemblyReference>
       <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Initialize, populate and output a configuration Dictionary to be used throughout the project.&#xA;Settings and constants are read from the local JSON configuration file, one section at a time (by default the Settings and Constants sections).&#xA;Orchestrator artifacts such as queues and assets are not defined in the configuration file: they are declared as solution resources and referenced through bindings." DisplayName="Initialize All Settings" sap:VirtualizedContainerService.HintSize="649.6,2500" sap2010:WorkflowViewState.IdRef="Sequence_5">
+  <Sequence sap2010:Annotation.AnnotationText="Initialize, populate and output a configuration Dictionary to be used throughout the project.&#xA;Settings and constants are read from the local JSON configuration file, one section at a time (by default the Settings and Constants sections).&#xA;Orchestrator artifacts such as queues and assets are not defined in the configuration file: they are declared as solution resources and referenced through bindings." DisplayName="Initialize All Settings" sap:VirtualizedContainerService.HintSize="718.8000000000001,2849.6" sap2010:WorkflowViewState.IdRef="Sequence_5">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="Raw text content of the JSON configuration file." Name="ConfigJson" />
       <Variable x:TypeArguments="scg:Dictionary(x:String, scg:Dictionary(x:String, x:Object))" sap2010:Annotation.AnnotationText="Configuration file deserialized into sections of key/value pairs." Name="ConfigSections" />
@@ -227,7 +229,11 @@
         </InArgument>
       </ui:ForEach.Values>
     </ui:ForEach>
-    <Sequence DisplayName="Get orchestrator assets" sap:VirtualizedContainerService.HintSize="649.6,775.2" sap2010:WorkflowViewState.IdRef="Sequence_9">
+    <Sequence DisplayName="Get orchestrator assets" sap:VirtualizedContainerService.HintSize="649.6,1124.8" sap2010:WorkflowViewState.IdRef="Sequence_9">
+      <Sequence.Variables>
+        <Variable x:TypeArguments="x:String" Name="regonUser" />
+        <Variable x:TypeArguments="ss:SecureString" Name="regonKey" />
+      </Sequence.Variables>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -254,13 +260,37 @@
           </OutArgument>
         </ui:GetRobotAsset.Value>
       </ui:GetRobotAsset>
-      <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="VV_ReportsFolderId" CacheStrategy="None" DisplayName="Get Asset" FolderPath="uipath-dev" sap:VirtualizedContainerService.HintSize="616,166.4" sap2010:WorkflowViewState.IdRef="GetRobotAsset_4">
+      <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="VV_ReportsFolderId" CacheStrategy="None" DisplayName="Get Asset" FolderPath="uipath-dev" sap:VirtualizedContainerService.HintSize="616,175.2" sap2010:WorkflowViewState.IdRef="GetRobotAsset_4">
         <ui:GetRobotAsset.Value>
           <OutArgument x:TypeArguments="x:String">
             <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_18">out_Config["ReportsFolderId"]</CSharpReference>
           </OutArgument>
         </ui:GetRobotAsset.Value>
       </ui:GetRobotAsset>
+      <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="VV_RegonApiKey" CacheStrategy="None" DisplayName="Get Credential" FolderPath="uipath-dev" sap:VirtualizedContainerService.HintSize="616,175.2" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1">
+        <ui:GetRobotCredential.Password>
+          <OutArgument x:TypeArguments="ss:SecureString">
+            <CSharpReference x:TypeArguments="ss:SecureString" sap2010:WorkflowViewState.IdRef="CSharpReference`1_20">regonKey</CSharpReference>
+          </OutArgument>
+        </ui:GetRobotCredential.Password>
+        <ui:GetRobotCredential.Username>
+          <OutArgument x:TypeArguments="x:String">
+            <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_19">regonUser</CSharpReference>
+          </OutArgument>
+        </ui:GetRobotCredential.Username>
+      </ui:GetRobotCredential>
+      <Assign sap:VirtualizedContainerService.HintSize="616,165.6" sap2010:WorkflowViewState.IdRef="Assign_4">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:Object">
+            <CSharpReference x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpReference`1_21">out_Config["RegonApiKey"]</CSharpReference>
+          </OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:Object">
+            <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_42">regonKey</CSharpValue>
+          </InArgument>
+        </Assign.Value>
+      </Assign>
     </Sequence>
   </Sequence>
 </Activity>
