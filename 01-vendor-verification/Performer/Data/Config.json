@@ -15,6 +15,7 @@
     "RetryNumberGetTransactionItem": 2,
 	"RegonServiceUrl": "https://wyszukiwarkaregontest.stat.gov.pl/wsBIR/UslugaBIRzewnPubl.svc",
     "RetryNumberSetTransactionStatus": 2,
+	"NameMatchThreshold": 0.8,
     "ShouldMarkJobAsFaulted": true
   }
 }

@@ -27,6 +27,7 @@
       <x:String>System.Reflection</x:String>
       <x:String>System.Collections</x:String>
       <x:String>System.Security</x:String>
+      <x:String>System.Globalization</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -79,7 +80,7 @@
       <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Invoke major steps of the business process, which are usually implemented by multiple subworkflows.&#xA;&#xA;If a BusinessRuleException is thrown, the transaction is skipped. &#xA;If another kind of exception occurs, the current transaction can be retried. " DisplayName="Process" sap:VirtualizedContainerService.HintSize="718.8000000000001,2256.8" sap2010:WorkflowViewState.IdRef="Sequence_2">
+  <Sequence sap2010:Annotation.AnnotationText="Invoke major steps of the business process, which are usually implemented by multiple subworkflows.&#xA;&#xA;If a BusinessRuleException is thrown, the transaction is skipped. &#xA;If another kind of exception occurs, the current transaction can be retried. " DisplayName="Process" sap:VirtualizedContainerService.HintSize="718.8000000000001,2432.8" sap2010:WorkflowViewState.IdRef="Sequence_2">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="invalidReason" />
       <Variable x:TypeArguments="x:Boolean" Name="isInputValid" />
@@ -121,14 +122,14 @@
         </InOutArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
-    <If sap:VirtualizedContainerService.HintSize="513.6,1516" sap2010:WorkflowViewState.IdRef="If_1">
+    <If sap:VirtualizedContainerService.HintSize="513.6,1692" sap2010:WorkflowViewState.IdRef="If_1">
       <If.Condition>
         <InArgument x:TypeArguments="x:Boolean">
           <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_4">isInputValid</CSharpValue>
         </InArgument>
       </If.Condition>
       <If.Then>
-        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="512,940" sap2010:WorkflowViewState.IdRef="Sequence_3">
+        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="512,1116" sap2010:WorkflowViewState.IdRef="Sequence_3">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -187,6 +188,16 @@
               </Sequence>
             </If.Else>
           </If>
+          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" DisplayName="EvaluateResult - Invoke Workflow File (Steps\EvaluateResult.xaml)" sap:VirtualizedContainerService.HintSize="478.4,176" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" UnSafe="False" WorkflowFileName="Steps\EvaluateResult.xaml">
+            <ui:InvokeWorkflowFile.Arguments>
+              <InArgument x:TypeArguments="x:Double" x:Key="in_NameMatchThreshold">
+                <CSharpValue x:TypeArguments="x:Double" sap2010:WorkflowViewState.IdRef="CSharpValue`1_14">Convert.ToDouble(in_Config["NameMatchThreshold"], CultureInfo.InvariantCulture)</CSharpValue>
+              </InArgument>
+              <InOutArgument x:TypeArguments="scg:Dictionary(x:String, x:String)" x:Key="io_Request">
+                <CSharpReference x:TypeArguments="scg:Dictionary(x:String, x:String)" sap2010:WorkflowViewState.IdRef="CSharpReference`1_10">request</CSharpReference>
+              </InOutArgument>
+            </ui:InvokeWorkflowFile.Arguments>
+          </ui:InvokeWorkflowFile>
           <ui:Comment sap:VirtualizedContainerService.HintSize="478.4,79.2" sap2010:WorkflowViewState.IdRef="Comment_2" Text="// Step 13: name match, result rules&#xA;" />
         </Sequence>
       </If.Then>
@@ -238,7 +249,7 @@
     </If>
     <Throw DisplayName="TMP DEV - REMOVE FOR PROD" sap:VirtualizedContainerService.HintSize="513.6,113.6" sap2010:WorkflowViewState.IdRef="Throw_1">
       <InArgument x:TypeArguments="s:Exception">
-        <CSharpValue x:TypeArguments="s:Exception" sap2010:WorkflowViewState.IdRef="CSharpValue`1_13">new BusinessRuleException("DEV STOP after CheckRegon + CheckWhiteList / CheckVies")</CSharpValue>
+        <CSharpValue x:TypeArguments="s:Exception" sap2010:WorkflowViewState.IdRef="CSharpValue`1_15">new BusinessRuleException("DEV STOP after EvaluateResult")</CSharpValue>
       </InArgument>
     </Throw>
   </Sequence>
