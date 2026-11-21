@@ -162,28 +162,28 @@
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Dispatch vendor requests" sap:VirtualizedContainerService.HintSize="749.2,995.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Dispatch vendor requests" sap:VirtualizedContainerService.HintSize="736.4000000000001,1008" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="470.4,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_8" Level="Info">
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="451.2,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_8" Level="Info">
       <ui:LogMessage.Message>
         <InArgument x:TypeArguments="x:Object">
           <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_47">"Dispatcher started in mode " + in_Mode</CSharpValue>
         </InArgument>
       </ui:LogMessage.Message>
     </ui:LogMessage>
-    <Switch x:TypeArguments="x:String" DisplayName="Select mode" sap:VirtualizedContainerService.HintSize="470.4,797.6" sap2010:WorkflowViewState.IdRef="Switch`1_1">
+    <Switch x:TypeArguments="x:String" DisplayName="Select mode" sap:VirtualizedContainerService.HintSize="451.2,810.4" sap2010:WorkflowViewState.IdRef="Switch`1_1">
       <Switch.Default>
-        <Sequence DisplayName="Default" sap:VirtualizedContainerService.HintSize="468.8,173.6" sap2010:WorkflowViewState.IdRef="Sequence_15">
+        <Sequence DisplayName="Default" sap:VirtualizedContainerService.HintSize="449.6,173.6" sap2010:WorkflowViewState.IdRef="Sequence_15">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <Throw DisplayName="unknown mode" sap:VirtualizedContainerService.HintSize="435.2,113.6" sap2010:WorkflowViewState.IdRef="Throw_1">
+          <Throw DisplayName="unknown mode" sap:VirtualizedContainerService.HintSize="416,113.6" sap2010:WorkflowViewState.IdRef="Throw_1">
             <InArgument x:TypeArguments="s:Exception">
               <CSharpValue x:TypeArguments="s:Exception" sap2010:WorkflowViewState.IdRef="CSharpValue`1_50">new ArgumentException("Unknown mode '" + in_Mode + "': expected Form or Recheck")</CSharpValue>
             </InArgument>
@@ -195,13 +195,13 @@
           <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_48">in_Mode</CSharpValue>
         </InArgument>
       </Switch.Expression>
-      <Sequence x:Key="Form" DisplayName="Case" sap:VirtualizedContainerService.HintSize="468.8,227.2" sap2010:WorkflowViewState.IdRef="Sequence_16">
+      <Sequence x:Key="Form" DisplayName="Case" sap:VirtualizedContainerService.HintSize="449.6,227.2" sap2010:WorkflowViewState.IdRef="Sequence_16">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
-        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" DisplayName="DispatchFormResponses - Invoke Workflow File (Steps\DispatchFormResponses.xaml)" sap:VirtualizedContainerService.HintSize="435.2,167.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Steps\DispatchFormResponses.xaml">
+        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" DisplayName="DispatchFormResponses - Invoke Workflow File (Steps\DispatchFormResponses.xaml)" sap:VirtualizedContainerService.HintSize="416,167.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Steps\DispatchFormResponses.xaml">
           <ui:InvokeWorkflowFile.Arguments>
             <InArgument x:TypeArguments="x:Int32" x:Key="in_LookbackDays">
               <CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_49">in_LookbackDays</CSharpValue>
@@ -209,13 +209,13 @@
           </ui:InvokeWorkflowFile.Arguments>
         </ui:InvokeWorkflowFile>
       </Sequence>
-      <Sequence x:Key="Recheck" DisplayName="Case" sap:VirtualizedContainerService.HintSize="468.8,227.2" sap2010:WorkflowViewState.IdRef="Sequence_17">
+      <Sequence x:Key="Recheck" DisplayName="Case" sap:VirtualizedContainerService.HintSize="449.6,227.2" sap2010:WorkflowViewState.IdRef="Sequence_17">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
-        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" DisplayName="DispatchRecheck - Invoke Workflow File (Steps\DispatchRecheck.xaml)" sap:VirtualizedContainerService.HintSize="435.2,167.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Steps\DispatchRecheck.xaml">
+        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" DisplayName="DispatchRecheck - Invoke Workflow File (Steps\DispatchRecheck.xaml)" sap:VirtualizedContainerService.HintSize="416,167.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Steps\DispatchRecheck.xaml">
           <ui:InvokeWorkflowFile.Arguments>
             <scg:Dictionary x:TypeArguments="x:String, Argument" />
           </ui:InvokeWorkflowFile.Arguments>
