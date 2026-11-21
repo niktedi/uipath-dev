@@ -8,12 +8,17 @@
       "input": {
         "type": "object",
         "properties": {
+          "in_Mode": {
+            "type": "string",
+            "x-default-expression": "\"Form\"",
+            "default": "Form"
+          },
           "in_LookbackDays": {
             "type": "integer",
             "minimum": -2147483648,
             "maximum": 2147483647,
-            "x-default-expression": "0",
-            "default": 0
+            "x-default-expression": "7",
+            "default": 7
           }
         },
         "required": []

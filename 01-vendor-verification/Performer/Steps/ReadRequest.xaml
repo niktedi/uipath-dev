@@ -88,7 +88,7 @@
       <AssemblyReference>Newtonsoft.Json</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="ReadRequest" sap:VirtualizedContainerService.HintSize="718.8000000000001,1980" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="ReadRequest" sap:VirtualizedContainerService.HintSize="749.2,1980" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="s:String[]" Name="missingFields" />
     </Sequence.Variables>
@@ -138,7 +138,7 @@
       </ui:ForEach.Body>
       <ui:ForEach.Values>
         <InArgument x:TypeArguments="sc:IEnumerable">
-          <CSharpValue x:TypeArguments="sc:IEnumerable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_2">new[] { "RequestId", "Source", "SubmittedAt", "RequestedBy", "VendorName", "Country", "Nip", "VatId", "Iban" }</CSharpValue>
+          <CSharpValue x:TypeArguments="sc:IEnumerable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_16">new[] { "RequestId", "Source", "SubmittedAt", "RequestedBy", "VendorName", "Country", "Nip", "VatId", "Iban","PreviousResult", "PreviousVatStatus" }</CSharpValue>
         </InArgument>
       </ui:ForEach.Values>
     </ui:ForEach>

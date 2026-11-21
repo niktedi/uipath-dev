@@ -6,11 +6,23 @@
   "OriginalIconFileName": null,
   "Arguments": [
     {
+      "Name": "in_Mode",
+      "DisplayName": "in_Mode",
+      "Category": null,
+      "Tooltip": null,
+      "Placeholder": "Form",
+      "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": true,
+      "ArgumentType": 0,
+      "DataSourceItems": null
+    },
+    {
       "Name": "in_LookbackDays",
       "DisplayName": "in_LookbackDays",
       "Category": null,
       "Tooltip": null,
-      "Placeholder": "7",
+      "Placeholder": null,
       "Widget": null,
       "IsRequired": false,
       "IsPrincipal": true,
