@@ -18,4 +18,4 @@ Case,DevSet,RequestedBy,VendorName,Country,Nip,VatId,Iban,ExpectedResult,Note
 17,,uibot778+marek@gmail.com,SAP SE,DE,,DE143454214,,WARNING,VIES valid but Germany returns no name so the name cannot be verified
 18,,uibot778+ewa@gmail.com,Fake GmbH,DE,,DE000000000,,BLOCK,VIES invalid
 19,,uibot778+tom@gmail.com,No VAT SARL,FR,,,,BLOCK,Invalid input: VAT ID missing for an EU vendor
-20,,uibot778+kasia@gmail.com,Mismatch BV,NL,,BE0403170701,,BLOCK,"VAT ID prefix BE does not match country NL: prefix NL is added (NLBE0403170701), VIES invalid (not detected as invalid input)"
+20,,uibot778+kasia@gmail.com,Mismatch BV,NL,,BE0403170701,,BLOCK,Invalid input: VAT ID prefix BE does not match country NL
