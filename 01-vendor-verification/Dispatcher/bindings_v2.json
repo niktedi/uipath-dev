@@ -1,0 +1,88 @@
+{
+  "version": "2.0",
+  "resources": [
+    {
+      "activityDisplayName": "Get Asset",
+      "activityId": "GetRobotAsset_2",
+      "resource": "asset",
+      "key": "uipath-dev.VV_RequestsSheetId",
+      "id": "assetuipath-dev.VV_RequestsSheetIduipath-devFalseVV_RequestsSheetIdFalse",
+      "value": {
+        "folderPath": {
+          "defaultValue": "uipath-dev",
+          "isExpression": false
+        },
+        "name": {
+          "defaultValue": "VV_RequestsSheetId",
+          "isExpression": false
+        }
+      },
+      "metadata": {
+        "BindingsVersion": "2.2"
+      }
+    },
+    {
+      "activityDisplayName": "SheetsReadTable",
+      "activityId": "SheetsReadTable_2",
+      "resource": "Connection",
+      "key": "9fa4a06e-cd40-4b26-adfe-8673ffea53c2SheetsReadTable",
+      "id": "Connection9fa4a06e-cd40-4b26-adfe-8673ffea53c2SheetsReadTable9fa4a06e-cd40-4b26-adfe-8673ffea53c2False",
+      "value": {
+        "ConnectionId": {
+          "defaultValue": "9fa4a06e-cd40-4b26-adfe-8673ffea53c2",
+          "isExpression": false,
+          "displayName": "uipath-google-sheets"
+        }
+      },
+      "metadata": {
+        "BindingsVersion": "2.2",
+        "UseConnectionService": "True",
+        "Connector": "uipath-google-sheets",
+        "CompilerActivityId": "ReadRangeConnections`1_2",
+        "CompilerActivityDisplayName": "Read Range"
+      }
+    },
+    {
+      "activityDisplayName": "Get Queue Items",
+      "activityId": "GetQueueItems_2",
+      "resource": "queue",
+      "key": "uipath-dev.VV_VerificationQueue",
+      "id": "queueuipath-dev.VV_VerificationQueueuipath-devFalseVV_VerificationQueueFalse",
+      "value": {
+        "folderPath": {
+          "defaultValue": "uipath-dev",
+          "isExpression": false,
+          "displayName": "Folder path"
+        },
+        "name": {
+          "defaultValue": "VV_VerificationQueue",
+          "isExpression": false,
+          "displayName": "Queue name"
+        }
+      },
+      "metadata": {
+        "BindingsVersion": "2.2"
+      }
+    },
+    {
+      "activityDisplayName": "Get Asset",
+      "activityId": "GetRobotAsset_1",
+      "resource": "asset",
+      "key": "uipath-dev.VV_RegisterSheetId",
+      "id": "assetuipath-dev.VV_RegisterSheetIduipath-devFalseVV_RegisterSheetIdFalse",
+      "value": {
+        "folderPath": {
+          "defaultValue": "uipath-dev",
+          "isExpression": false
+        },
+        "name": {
+          "defaultValue": "VV_RegisterSheetId",
+          "isExpression": false
+        }
+      },
+      "metadata": {
+        "BindingsVersion": "2.2"
+      }
+    }
+  ]
+}

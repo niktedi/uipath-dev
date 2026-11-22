@@ -1,0 +1,273 @@
+{
+  "version": "2.0",
+  "resources": [
+    {
+      "activityDisplayName": "Get transaction item",
+      "activityId": "GetQueueItem_1",
+      "resource": "queue",
+      "key": "uipath-dev.VV_VerificationQueue",
+      "id": "queueuipath-dev.VV_VerificationQueueuipath-devFalseVV_VerificationQueueFalse",
+      "value": {
+        "folderPath": {
+          "defaultValue": "uipath-dev",
+          "isExpression": false,
+          "displayName": "Folder path"
+        },
+        "name": {
+          "defaultValue": "VV_VerificationQueue",
+          "isExpression": false,
+          "displayName": "Queue name"
+        }
+      },
+      "metadata": {
+        "BindingsVersion": "2.2"
+      }
+    },
+    {
+      "activityDisplayName": "Get Asset",
+      "activityId": "GetRobotAsset_1",
+      "resource": "asset",
+      "key": "uipath-dev.VV_RequestsSheetId",
+      "id": "assetuipath-dev.VV_RequestsSheetIduipath-devFalseVV_RequestsSheetIdFalse",
+      "value": {
+        "folderPath": {
+          "defaultValue": "uipath-dev",
+          "isExpression": false
+        },
+        "name": {
+          "defaultValue": "VV_RequestsSheetId",
+          "isExpression": false
+        }
+      },
+      "metadata": {
+        "BindingsVersion": "2.2"
+      }
+    },
+    {
+      "activityDisplayName": "Get Asset",
+      "activityId": "GetRobotAsset_2",
+      "resource": "asset",
+      "key": "uipath-dev.VV_NotifyEmail",
+      "id": "assetuipath-dev.VV_NotifyEmailuipath-devFalseVV_NotifyEmailFalse",
+      "value": {
+        "folderPath": {
+          "defaultValue": "uipath-dev",
+          "isExpression": false
+        },
+        "name": {
+          "defaultValue": "VV_NotifyEmail",
+          "isExpression": false
+        }
+      },
+      "metadata": {
+        "BindingsVersion": "2.2"
+      }
+    },
+    {
+      "activityDisplayName": "Get Asset",
+      "activityId": "GetRobotAsset_3",
+      "resource": "asset",
+      "key": "uipath-dev.VV_RegisterSheetId",
+      "id": "assetuipath-dev.VV_RegisterSheetIduipath-devFalseVV_RegisterSheetIdFalse",
+      "value": {
+        "folderPath": {
+          "defaultValue": "uipath-dev",
+          "isExpression": false
+        },
+        "name": {
+          "defaultValue": "VV_RegisterSheetId",
+          "isExpression": false
+        }
+      },
+      "metadata": {
+        "BindingsVersion": "2.2"
+      }
+    },
+    {
+      "activityDisplayName": "Get Asset",
+      "activityId": "GetRobotAsset_4",
+      "resource": "asset",
+      "key": "uipath-dev.VV_ReportsFolderId",
+      "id": "assetuipath-dev.VV_ReportsFolderIduipath-devFalseVV_ReportsFolderIdFalse",
+      "value": {
+        "folderPath": {
+          "defaultValue": "uipath-dev",
+          "isExpression": false
+        },
+        "name": {
+          "defaultValue": "VV_ReportsFolderId",
+          "isExpression": false
+        }
+      },
+      "metadata": {
+        "BindingsVersion": "2.2"
+      }
+    },
+    {
+      "activityDisplayName": "Get Credential",
+      "activityId": "GetRobotCredential_1",
+      "resource": "asset",
+      "key": "uipath-dev.VV_RegonApiKey",
+      "id": "assetuipath-dev.VV_RegonApiKeyuipath-devFalseVV_RegonApiKeyFalse",
+      "value": {
+        "folderPath": {
+          "defaultValue": "uipath-dev",
+          "isExpression": false
+        },
+        "name": {
+          "defaultValue": "VV_RegonApiKey",
+          "isExpression": false
+        }
+      },
+      "metadata": {
+        "BindingsVersion": "2.2"
+      }
+    },
+    {
+      "activityDisplayName": "Get Asset",
+      "activityId": "GetRobotAsset_5",
+      "resource": "asset",
+      "key": "uipath-dev.VV_ReportTemplateId",
+      "id": "assetuipath-dev.VV_ReportTemplateIduipath-devFalseVV_ReportTemplateIdFalse",
+      "value": {
+        "folderPath": {
+          "defaultValue": "uipath-dev",
+          "isExpression": false
+        },
+        "name": {
+          "defaultValue": "VV_ReportTemplateId",
+          "isExpression": false
+        }
+      },
+      "metadata": {
+        "BindingsVersion": "2.2"
+      }
+    },
+    {
+      "activityDisplayName": "SendGmail",
+      "activityId": "SendGmail_1",
+      "resource": "Connection",
+      "key": "05f29d7f-f635-477a-8b94-00df1ac3ac24SendGmail",
+      "id": "Connection05f29d7f-f635-477a-8b94-00df1ac3ac24SendGmail05f29d7f-f635-477a-8b94-00df1ac3ac24False",
+      "value": {
+        "ConnectionId": {
+          "defaultValue": "05f29d7f-f635-477a-8b94-00df1ac3ac24",
+          "isExpression": false,
+          "displayName": "uipath-google-drive"
+        }
+      },
+      "metadata": {
+        "BindingsVersion": "2.2",
+        "UseConnectionService": "True",
+        "Connector": "uipath-google-drive",
+        "CompilerActivityId": "GetFileFolderConnections_1",
+        "CompilerActivityDisplayName": "Get File or Folder"
+      }
+    },
+    {
+      "activityDisplayName": "SendGmail",
+      "activityId": "SendGmail_1",
+      "resource": "Connection",
+      "key": "bc15d384-8cf7-4056-91da-3cb7d8f441a3SendGmail",
+      "id": "Connectionbc15d384-8cf7-4056-91da-3cb7d8f441a3SendGmailbc15d384-8cf7-4056-91da-3cb7d8f441a3False",
+      "value": {
+        "ConnectionId": {
+          "defaultValue": "bc15d384-8cf7-4056-91da-3cb7d8f441a3",
+          "isExpression": false,
+          "displayName": "uipath-google-gmail"
+        }
+      },
+      "metadata": {
+        "BindingsVersion": "2.2",
+        "UseConnectionService": "True",
+        "Connector": "uipath-google-gmail",
+        "CompilerActivityId": "SendEmailConnections_1",
+        "CompilerActivityDisplayName": "Send Email"
+      }
+    },
+    {
+      "activityDisplayName": "DocsRenderTemplate",
+      "activityId": "DocsRenderTemplate_1",
+      "resource": "Connection",
+      "key": "09456fb2-224a-4f85-9ca9-8c190950bd39DocsRenderTemplate",
+      "id": "Connection09456fb2-224a-4f85-9ca9-8c190950bd39DocsRenderTemplate09456fb2-224a-4f85-9ca9-8c190950bd39False",
+      "value": {
+        "ConnectionId": {
+          "defaultValue": "09456fb2-224a-4f85-9ca9-8c190950bd39",
+          "isExpression": false,
+          "displayName": "uipath-google-docs"
+        }
+      },
+      "metadata": {
+        "BindingsVersion": "2.2",
+        "UseConnectionService": "True",
+        "Connector": "uipath-google-docs",
+        "CompilerActivityId": "ReadTextConnections_1",
+        "CompilerActivityDisplayName": "Read Text"
+      }
+    },
+    {
+      "activityDisplayName": "DocsRenderTemplate",
+      "activityId": "DocsRenderTemplate_1",
+      "resource": "Connection",
+      "key": "05f29d7f-f635-477a-8b94-00df1ac3ac24DocsRenderTemplate",
+      "id": "Connection05f29d7f-f635-477a-8b94-00df1ac3ac24DocsRenderTemplate05f29d7f-f635-477a-8b94-00df1ac3ac24False",
+      "value": {
+        "ConnectionId": {
+          "defaultValue": "05f29d7f-f635-477a-8b94-00df1ac3ac24",
+          "isExpression": false,
+          "displayName": "uipath-google-drive"
+        }
+      },
+      "metadata": {
+        "BindingsVersion": "2.2",
+        "UseConnectionService": "True",
+        "Connector": "uipath-google-drive",
+        "CompilerActivityId": "CopyFileConnections_1",
+        "CompilerActivityDisplayName": "Copy File"
+      }
+    },
+    {
+      "activityDisplayName": "Save to register",
+      "activityId": "SheetsUpsertByKey_1",
+      "resource": "Connection",
+      "key": "9fa4a06e-cd40-4b26-adfe-8673ffea53c2Save to register",
+      "id": "Connection9fa4a06e-cd40-4b26-adfe-8673ffea53c2Save to register9fa4a06e-cd40-4b26-adfe-8673ffea53c2False",
+      "value": {
+        "ConnectionId": {
+          "defaultValue": "9fa4a06e-cd40-4b26-adfe-8673ffea53c2",
+          "isExpression": false,
+          "displayName": "uipath-google-sheets"
+        }
+      },
+      "metadata": {
+        "BindingsVersion": "2.2",
+        "UseConnectionService": "True",
+        "Connector": "uipath-google-sheets",
+        "CompilerActivityId": "WriteRangeConnections_1",
+        "CompilerActivityDisplayName": "Write Range"
+      }
+    },
+    {
+      "activityDisplayName": "Save to requests",
+      "activityId": "SheetsUpsertByKey_2",
+      "resource": "Connection",
+      "key": "9fa4a06e-cd40-4b26-adfe-8673ffea53c2Save to requests",
+      "id": "Connection9fa4a06e-cd40-4b26-adfe-8673ffea53c2Save to requests9fa4a06e-cd40-4b26-adfe-8673ffea53c2False",
+      "value": {
+        "ConnectionId": {
+          "defaultValue": "9fa4a06e-cd40-4b26-adfe-8673ffea53c2",
+          "isExpression": false,
+          "displayName": "uipath-google-sheets"
+        }
+      },
+      "metadata": {
+        "BindingsVersion": "2.2",
+        "UseConnectionService": "True",
+        "Connector": "uipath-google-sheets",
+        "CompilerActivityId": "WriteRangeConnections_1",
+        "CompilerActivityDisplayName": "Write Range"
+      }
+    }
+  ]
+}
