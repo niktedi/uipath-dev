@@ -1,0 +1,290 @@
+{
+  "$schema": "https://cloud.uipath.com/draft/2024-12/entry-point",
+  "entryPoints": [
+    {
+      "filePath": "CheckBankDetails.xaml",
+      "uniqueId": "cbc5ced6-04f2-4ed2-91c3-751a521105f8",
+      "type": "process",
+      "input": {
+        "type": "object",
+        "properties": {
+          "in_AgentNip": {
+            "type": "string"
+          },
+          "in_AgentIban": {
+            "type": "string"
+          },
+          "in_FoundIbans": {
+            "type": "string"
+          },
+          "in_From": {
+            "type": "string"
+          }
+        },
+        "required": []
+      },
+      "output": {
+        "type": "object",
+        "properties": {
+          "out_RiskReasons": {
+            "type": "string"
+          },
+          "out_RiskLevel": {
+            "type": "string"
+          },
+          "out_WhiteListRequestId": {
+            "type": "string"
+          },
+          "out_IbanOnWhiteList": {
+            "type": "string"
+          },
+          "out_WhiteListStatus": {
+            "type": "string"
+          },
+          "out_NewIban": {
+            "type": "string"
+          },
+          "out_VendorNip": {
+            "type": "string"
+          },
+          "out_CurrentIban": {
+            "type": "string"
+          },
+          "out_VendorName": {
+            "type": "string"
+          },
+          "out_VendorId": {
+            "type": "string"
+          },
+          "out_SenderKnown": {
+            "type": "boolean"
+          },
+          "out_IbanKnown": {
+            "type": "boolean"
+          },
+          "out_IbanValid": {
+            "type": "boolean"
+          },
+          "out_VendorFound": {
+            "type": "boolean"
+          }
+        }
+      }
+    },
+    {
+      "filePath": "CreateVendorRecheck.xaml",
+      "uniqueId": "cbd7fe1f-5845-45af-9080-9b84f7374e19",
+      "type": "process",
+      "input": {
+        "type": "object",
+        "properties": {
+          "in_NewIban": {
+            "type": "string"
+          },
+          "in_VendorId": {
+            "type": "string"
+          },
+          "in_ApprovedAt": {
+            "type": "string"
+          },
+          "in_ReviewerEmail": {
+            "type": "string"
+          },
+          "in_MessageId": {
+            "type": "string"
+          }
+        },
+        "required": []
+      },
+      "output": {
+        "type": "object",
+        "properties": {
+          "out_Reference": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    {
+      "filePath": "FinalizeEmail.xaml",
+      "uniqueId": "f57d6bf7-ad26-45ec-8f31-6794ca0f9617",
+      "type": "process",
+      "input": {
+        "type": "object",
+        "properties": {
+          "in_SavedFileIds": {
+            "type": "string"
+          },
+          "in_RecheckReference": {
+            "type": "string"
+          },
+          "in_ReviewComment": {
+            "type": "string"
+          },
+          "in_Reviewer": {
+            "type": "string"
+          },
+          "in_ReviewOutcome": {
+            "type": "string"
+          },
+          "in_RiskReasons": {
+            "type": "string"
+          },
+          "in_RiskLevel": {
+            "type": "string"
+          },
+          "in_RiskSignals": {
+            "type": "string"
+          },
+          "in_Entities": {
+            "type": "string"
+          },
+          "in_Summary": {
+            "type": "string"
+          },
+          "in_Language": {
+            "type": "string"
+          },
+          "in_ConfidenceThreshold": {
+            "type": "number",
+            "minimum": -1.7976931348623157E+308,
+            "maximum": 1.7976931348623157E+308
+          },
+          "in_Confidence": {
+            "type": "number",
+            "minimum": -1.7976931348623157E+308,
+            "maximum": 1.7976931348623157E+308
+          },
+          "in_Class": {
+            "type": "string"
+          },
+          "in_FoundIbans": {
+            "type": "string"
+          },
+          "in_Subject": {
+            "type": "string"
+          },
+          "in_From": {
+            "type": "string"
+          },
+          "in_ReceivedAt": {
+            "type": "string"
+          },
+          "in_MessageId": {
+            "type": "string"
+          }
+        },
+        "required": []
+      },
+      "output": {
+        "type": "object",
+        "properties": {
+          "out_Route": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    {
+      "filePath": "GetEmail.xaml",
+      "uniqueId": "18040c94-4d62-4ab0-8d3f-819e9e011833",
+      "type": "process",
+      "input": {
+        "type": "object",
+        "properties": {
+          "in_MessageId": {
+            "type": "string"
+          }
+        },
+        "required": []
+      },
+      "output": {
+        "type": "object",
+        "properties": {
+          "out_FoundNips": {
+            "type": "string"
+          },
+          "out_FoundIbans": {
+            "type": "string"
+          },
+          "out_AttachmentNames": {
+            "type": "string"
+          },
+          "out_BodyText": {
+            "type": "string"
+          },
+          "out_ReceivedAt": {
+            "type": "string"
+          },
+          "out_Subject": {
+            "type": "string"
+          },
+          "out_From": {
+            "type": "string"
+          },
+          "out_AlreadyProcessed": {
+            "type": "boolean"
+          }
+        }
+      }
+    },
+    {
+      "filePath": "LookupVendor.xaml",
+      "uniqueId": "4837f0f5-cbaf-461e-9f70-b762f6c79c00",
+      "type": "process",
+      "input": {
+        "type": "object",
+        "properties": {
+          "in_SearchText": {
+            "type": "string"
+          }
+        },
+        "required": []
+      },
+      "output": {
+        "type": "object",
+        "properties": {
+          "out_VatId": {
+            "type": "string"
+          },
+          "out_Nip": {
+            "type": "string"
+          },
+          "out_VendorName": {
+            "type": "string"
+          },
+          "out_Found": {
+            "type": "boolean"
+          }
+        }
+      }
+    },
+    {
+      "filePath": "SaveInvoiceAttachments.xaml",
+      "uniqueId": "52239fae-fa77-4124-a8c4-023c5b38436f",
+      "type": "process",
+      "input": {
+        "type": "object",
+        "properties": {
+          "in_MessageId": {
+            "type": "string"
+          }
+        },
+        "required": []
+      },
+      "output": {
+        "type": "object",
+        "properties": {
+          "out_SavedCount": {
+            "type": "integer",
+            "minimum": -2147483648,
+            "maximum": 2147483647
+          },
+          "out_SavedFileIds": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  ]
+}

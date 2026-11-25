@@ -1,0 +1,90 @@
+{
+  "name": "UipathDev.MailboxTriage",
+  "projectId": "2bfdf1a2-5106-40f6-9888-87eedd0215a6",
+  "description": "Mailbox triage: RPA steps called by Maestro (GetEmail, CheckBankDetails, …)",
+  "main": "GetEmail.xaml",
+  "dependencies": {
+    "UiPath.GSuite.Activities": "[3.12.10]",
+    "UiPath.System.Activities": "[26.10.1]",
+    "UipathDev.Shared": "[1.0.0]"
+  },
+  "webServices": [],
+  "entitiesStores": [],
+  "schemaVersion": "4.1",
+  "studioVersion": "27.0.207.0",
+  "projectVersion": "0.1.0",
+  "runtimeOptions": {
+    "autoDispose": false,
+    "netFrameworkLazyLoading": false,
+    "isPausable": true,
+    "isAttended": false,
+    "requiresUserInteraction": true,
+    "supportsPersistence": false,
+    "workflowSerialization": "NewtonsoftJson",
+    "excludedLoggedData": [
+      "Private:*",
+      "*password*"
+    ],
+    "executionType": "Workflow",
+    "readyForPiP": false,
+    "startsInPiP": false,
+    "mustRestoreAllDependencies": true,
+    "pipType": "ChildSession"
+  },
+  "designOptions": {
+    "projectProfile": "Developement",
+    "outputType": "Process",
+    "libraryOptions": {
+      "privateWorkflows": []
+    },
+    "processOptions": {
+      "ignoredFiles": []
+    },
+    "fileInfoCollection": [],
+    "saveToCloud": false
+  },
+  "expressionLanguage": "CSharp",
+  "entryPoints": [
+    {
+      "filePath": "GetEmail.xaml",
+      "uniqueId": "18040c94-4d62-4ab0-8d3f-819e9e011833",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "LookupVendor.xaml",
+      "uniqueId": "4837f0f5-cbaf-461e-9f70-b762f6c79c00",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "FinalizeEmail.xaml",
+      "uniqueId": "f57d6bf7-ad26-45ec-8f31-6794ca0f9617",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "CreateVendorRecheck.xaml",
+      "uniqueId": "cbd7fe1f-5845-45af-9080-9b84f7374e19",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "CheckBankDetails.xaml",
+      "uniqueId": "cbc5ced6-04f2-4ed2-91c3-751a521105f8",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "SaveInvoiceAttachments.xaml",
+      "uniqueId": "52239fae-fa77-4124-a8c4-023c5b38436f",
+      "input": [],
+      "output": []
+    }
+  ],
+  "isTemplate": false,
+  "templateProjectData": {},
+  "publishData": {},
+  "targetFramework": "Windows",
+  "dotNetVersion": "net10.0"
+}
