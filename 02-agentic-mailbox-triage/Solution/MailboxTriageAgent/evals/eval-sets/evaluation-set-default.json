@@ -1,0 +1,56 @@
+{
+  "fileName": "evaluation-set-default.json",
+  "id": "cf70756e-961c-4f1d-8acb-46e00008b0a9",
+  "name": "Default Evaluation Set",
+  "batchSize": 10,
+  "evaluatorRefs": [
+    "98f87b73-98fa-4d50-b4b2-88208d01b91c"
+  ],
+  "evaluations": [
+    {
+      "id": "6117e83e-520b-4858-8fbe-972b9f34e351",
+      "name": "Debug Run 11/26/2026, 6:08:03 PM",
+      "inputs": {
+        "from": "uibot778+orlen@gmail.com",
+        "subject": "Faktura VAT FV/2026/11/04512",
+        "bodyText": "Dzień dobry,\n\nw załączeniu przesyłamy fakturę VAT nr FV/2026/11/04512 z dnia 24.11.2026 na kwotę 18 450,00 PLN brutto. Termin płatności: 24.12.2026.\n\nPłatność prosimy przekazać na rachunek: PL38 1240 5282 1111 0010 8004 7440.\n\nZ poważaniem\nDział Rozliczeń z Kontrahentami\nORLEN S.A.",
+        "attachmentNames": "FV_2026_11_04512.pdf",
+        "foundIbans": "PL38124052821111001080047440"
+      },
+      "expectedOutput": {
+        "emailClass": "invoice",
+        "confidence": 0.99,
+        "language": "pl",
+        "summary": "Email zawiera fakturę VAT od ORLEN S.A. z numerem FV/2026/11/04512, datą 24.11.2026, kwotą brutto 18 450,00 PLN oraz prośbą o płatność na podany rachunek IBAN. Nie ma wzmianki o zmianie rachunku bankowego.",
+        "entities": {
+          "vendorName": "ORLEN S.A.",
+          "vendorNip": "",
+          "newIban": "PL38 1240 5282 1111 0010 8004 7440",
+          "invoiceNumber": "FV/2026/11/04512",
+          "amount": "18 450,00",
+          "currency": "PLN",
+          "dueDate": "24.12.2026"
+        },
+        "riskSignals": [
+          "IBAN detected in email body and robot-extracted IBAN matches the payment account exactly; no bank change request is stated.",
+          "Vendor name appears as ORLEN S.A. in a routine invoice email from a Gmail address; sender domain is not corporate."
+        ]
+      },
+      "expectedAgentBehavior": "",
+      "simulationInstructions": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "evalSetId": "cf70756e-961c-4f1d-8acb-46e00008b0a9",
+      "createdAt": "2026-11-26T17:08:03.028Z",
+      "updatedAt": "2026-11-26T17:08:03.028Z",
+      "source": "firstSuccessfulRun"
+    }
+  ],
+  "modelSettings": [],
+  "createdAt": "2026-11-26T16:11:33.099Z",
+  "updatedAt": "2026-11-26T17:08:03.028Z",
+  "agentMemoryEnabled": false,
+  "agentMemorySettings": [],
+  "lineByLineEvaluation": false
+}

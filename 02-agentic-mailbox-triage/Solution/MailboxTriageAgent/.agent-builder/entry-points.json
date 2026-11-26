@@ -1,0 +1,98 @@
+{
+  "$schema": "https://cloud.uipath.com/draft/2024-12/entry-point",
+  "$id": "entry-points.json",
+  "entryPoints": [
+    {
+      "filePath": "/content/agent.json",
+      "type": "agent",
+      "uniqueId": "28c78d6e-c1a5-4540-9c55-6df46154022b",
+      "input": {
+        "type": "object",
+        "properties": {
+          "from": {
+            "type": "string"
+          },
+          "subject": {
+            "type": "string"
+          },
+          "bodyText": {
+            "type": "string"
+          },
+          "attachmentNames": {
+            "type": "string"
+          },
+          "foundIbans": {
+            "type": "string"
+          }
+        },
+        "title": "Inputs"
+      },
+      "output": {
+        "type": "object",
+        "properties": {
+          "emailClass": {
+            "type": "string"
+          },
+          "confidence": {
+            "type": "number"
+          },
+          "language": {
+            "type": "string"
+          },
+          "summary": {
+            "type": "string"
+          },
+          "entities": {
+            "type": "object",
+            "properties": {
+              "vendorName": {
+                "type": "string"
+              },
+              "vendorNip": {
+                "type": "string"
+              },
+              "newIban": {
+                "type": "string"
+              },
+              "invoiceNumber": {
+                "type": "string"
+              },
+              "amount": {
+                "type": "string"
+              },
+              "currency": {
+                "type": "string"
+              },
+              "dueDate": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "vendorName",
+              "vendorNip",
+              "newIban",
+              "invoiceNumber",
+              "amount",
+              "currency",
+              "dueDate"
+            ]
+          },
+          "riskSignals": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "emailClass",
+          "confidence",
+          "language",
+          "summary",
+          "entities",
+          "riskSignals"
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "ProjectType": "Agent",
+  "Name": "MailboxTriageAgent",
+  "Description": null,
+  "MainFile": null
+}

@@ -1,0 +1,18 @@
+{
+  "DocVersion": "1.0.0",
+  "StudioMinVersion": "2025.04.0",
+  "SolutionId": "edb0d00f-ffe5-4774-40e0-08df4b074f39",
+  "Projects": [
+    {
+      "Type": "Agent",
+      "ProjectRelativePath": "MailboxTriageAgent/project.uiproj",
+      "Id": "086e41c7-4d48-4a36-8bc5-9dba96458141"
+    },
+    {
+      "Type": "ProcessOrchestration",
+      "ProjectRelativePath": "BPMN/project.uiproj",
+      "Id": "f2baba3e-730a-45f0-a985-4f6483e41e10"
+    }
+  ],
+  "AutomationHubIdeaUrl": null
+}

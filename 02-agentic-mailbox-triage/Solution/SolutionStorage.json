@@ -1,0 +1,13 @@
+{
+  "SolutionId": "edb0d00f-ffe5-4774-40e0-08df4b074f39",
+  "Projects": [
+    {
+      "ProjectId": "9aa4d563-708f-4464-8362-32a692db67da",
+      "ProjectRelativePath": "MailboxTriageAgent/project.uiproj"
+    },
+    {
+      "ProjectId": "e0eab742-5aaa-4bb2-8f8a-78e4a298dddc",
+      "ProjectRelativePath": "BPMN/project.uiproj"
+    }
+  ]
+}

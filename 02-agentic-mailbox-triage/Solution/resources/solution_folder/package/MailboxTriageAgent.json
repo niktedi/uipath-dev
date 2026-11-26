@@ -1,0 +1,26 @@
+{
+  "docVersion": "1.0.0",
+  "resource": {
+    "name": "MailboxTriageAgent",
+    "kind": "package",
+    "apiVersion": "orchestrator.uipath.com/v1",
+    "projectKey": "086e41c7-4d48-4a36-8bc5-9dba96458141",
+    "isOverridable": true,
+    "dependencies": [],
+    "runtimeDependencies": [],
+    "files": [],
+    "folders": [
+      {
+        "fullyQualifiedName": "solution_folder"
+      }
+    ],
+    "spec": {
+      "fileName": null,
+      "fileReference": null,
+      "name": "MailboxTriageAgent",
+      "description": null
+    },
+    "locks": [],
+    "key": "1406e017-a811-4009-9a00-e1ada541fc9b"
+  }
+}
