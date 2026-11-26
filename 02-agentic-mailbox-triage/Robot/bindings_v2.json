@@ -1,4 +1,94 @@
 {
   "version": "2.0",
-  "resources": []
+  "resources": [
+    {
+      "activityDisplayName": "Get Email by ID",
+      "activityId": "GetEmailByIdConnections_1",
+      "resource": "Connection",
+      "key": "bc15d384-8cf7-4056-91da-3cb7d8f441a3",
+      "id": "Connectionbc15d384-8cf7-4056-91da-3cb7d8f441a3bc15d384-8cf7-4056-91da-3cb7d8f441a3False",
+      "value": {
+        "ConnectionId": {
+          "defaultValue": "bc15d384-8cf7-4056-91da-3cb7d8f441a3",
+          "isExpression": false,
+          "displayName": "Connection",
+          "description": "The connection to be used"
+        }
+      },
+      "metadata": {
+        "BindingsVersion": "2.2",
+        "Connector": "uipath-google-gmail",
+        "UseConnectionService": "True"
+      }
+    },
+    {
+      "activityDisplayName": "Get Asset",
+      "activityId": "GetRobotAsset_1",
+      "resource": "asset",
+      "key": "uipath-dev.MT_TriageLogSheetId",
+      "id": "assetuipath-dev.MT_TriageLogSheetIduipath-devFalseMT_TriageLogSheetIdFalse",
+      "value": {
+        "folderPath": {
+          "defaultValue": "uipath-dev",
+          "isExpression": false
+        },
+        "name": {
+          "defaultValue": "MT_TriageLogSheetId",
+          "isExpression": false
+        }
+      },
+      "metadata": {
+        "BindingsVersion": "2.2"
+      }
+    },
+    {
+      "activityDisplayName": "SheetsReadTable",
+      "activityId": "SheetsReadTable_1",
+      "resource": "Connection",
+      "key": "9fa4a06e-cd40-4b26-adfe-8673ffea53c2SheetsReadTable",
+      "id": "Connection9fa4a06e-cd40-4b26-adfe-8673ffea53c2SheetsReadTable9fa4a06e-cd40-4b26-adfe-8673ffea53c2False",
+      "value": {
+        "ConnectionId": {
+          "defaultValue": "9fa4a06e-cd40-4b26-adfe-8673ffea53c2",
+          "isExpression": false,
+          "displayName": "uipath-google-sheets"
+        }
+      },
+      "metadata": {
+        "BindingsVersion": "2.2",
+        "UseConnectionService": "True",
+        "Connector": "uipath-google-sheets",
+        "CompilerActivityId": "ReadRangeConnections`1_2",
+        "CompilerActivityDisplayName": "Read Range"
+      }
+    },
+    {
+      "activityDisplayName": "For Each Email",
+      "activityId": "ForEachEmailConnections_1",
+      "resource": "Property",
+      "key": "bc15d384-8cf7-4056-91da-3cb7d8f441a3.For Each Email",
+      "id": "Propertybc15d384-8cf7-4056-91da-3cb7d8f441a3.For Each EmailAP/NewFalseLabel_7375217667012996179False",
+      "value": {
+        "ParentFolders[*].Name": {
+          "defaultValue": "AP/New",
+          "isExpression": false,
+          "displayName": "Email folder or label",
+          "description": "The folder or label to get email messages from"
+        },
+        "ParentFolders[*].ID": {
+          "defaultValue": "Label_7375217667012996179",
+          "isExpression": false,
+          "displayName": "Email folder or label",
+          "description": "The folder or label to get email messages from"
+        }
+      },
+      "metadata": {
+        "BindingsVersion": "2.1",
+        "ActivityName": "For Each Email",
+        "ObjectName": "NormalizedMessage",
+        "DisplayLabel": "ParentFolders[*].Name",
+        "ParentResourceKey": "Connection.bc15d384-8cf7-4056-91da-3cb7d8f441a3"
+      }
+    }
+  ]
 }

@@ -12,13 +12,13 @@
   "entitiesStores": [],
   "schemaVersion": "4.1",
   "studioVersion": "27.0.207.0",
-  "projectVersion": "0.1.0",
+  "projectVersion": "0.2.1",
   "runtimeOptions": {
     "autoDispose": false,
     "netFrameworkLazyLoading": false,
     "isPausable": true,
     "isAttended": false,
-    "requiresUserInteraction": true,
+    "requiresUserInteraction": false,
     "supportsPersistence": false,
     "workflowSerialization": "NewtonsoftJson",
     "excludedLoggedData": [
@@ -38,7 +38,9 @@
       "privateWorkflows": []
     },
     "processOptions": {
-      "ignoredFiles": []
+      "ignoredFiles": [
+        "Dev/ListApEmails.xaml"
+      ]
     },
     "fileInfoCollection": [],
     "saveToCloud": false
