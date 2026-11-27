@@ -235,37 +235,6 @@
       }
     },
     {
-      "filePath": "LookupVendor.xaml",
-      "uniqueId": "4837f0f5-cbaf-461e-9f70-b762f6c79c00",
-      "type": "process",
-      "input": {
-        "type": "object",
-        "properties": {
-          "in_SearchText": {
-            "type": "string"
-          }
-        },
-        "required": []
-      },
-      "output": {
-        "type": "object",
-        "properties": {
-          "out_VatId": {
-            "type": "string"
-          },
-          "out_Nip": {
-            "type": "string"
-          },
-          "out_VendorName": {
-            "type": "string"
-          },
-          "out_Found": {
-            "type": "boolean"
-          }
-        }
-      }
-    },
-    {
       "filePath": "SaveInvoiceAttachments.xaml",
       "uniqueId": "52239fae-fa77-4124-a8c4-023c5b38436f",
       "type": "process",
