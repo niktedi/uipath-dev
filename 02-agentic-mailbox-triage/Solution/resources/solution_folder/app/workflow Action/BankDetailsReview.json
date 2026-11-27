@@ -1,0 +1,45 @@
+{
+  "docVersion": "1.0.0",
+  "resource": {
+    "name": "BankDetailsReview",
+    "kind": "app",
+    "type": "workflow Action",
+    "apiVersion": "apps.uipath.com/v1",
+    "projectKey": "b3ca7419-069c-4ae3-aee1-57a8a11ab2ea",
+    "isOverridable": true,
+    "dependencies": [
+      {
+        "name": "BankDetailsReview",
+        "kind": "appVersion"
+      },
+      {
+        "name": "BankDetailsReview",
+        "kind": "process"
+      }
+    ],
+    "runtimeDependencies": [],
+    "files": [],
+    "folders": [
+      {
+        "fullyQualifiedName": "solution_folder"
+      }
+    ],
+    "spec": {
+      "name": "BankDetailsReview",
+      "description": null,
+      "type": "workflow Action",
+      "version": null,
+      "appSystemName": null,
+      "appVersionRef": {
+        "key": "9fd20d4f-9444-4716-ab1c-9b4ffaf2fadc"
+      },
+      "codeBehindProcess": {
+        "key": "d65d34fd-886f-44e5-b61c-8aa9aacfb4d6"
+      },
+      "actionSchema": null,
+      "manualActivationActions": null
+    },
+    "locks": [],
+    "key": "6c0b1945-2fab-4223-84da-1c48f7d75efd"
+  }
+}

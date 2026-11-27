@@ -6,6 +6,10 @@
       "ProjectRelativePath": "MailboxTriageAgent/project.uiproj"
     },
     {
+      "ProjectId": "36c3a615-fbe4-4b3f-a129-5522082bc98b",
+      "ProjectRelativePath": "BankDetailsReview/project.uiproj"
+    },
+    {
       "ProjectId": "e0eab742-5aaa-4bb2-8f8a-78e4a298dddc",
       "ProjectRelativePath": "BPMN/project.uiproj"
     }

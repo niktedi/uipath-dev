@@ -1,4 +1,23 @@
 {
   "version": "2.0",
-  "resources": []
+  "resources": [
+    {
+      "resource": "app",
+      "key": "BankDetailsReview",
+      "id": "appBankDetailsReview",
+      "value": {
+        "name": {
+          "defaultValue": "BankDetailsReview",
+          "isExpression": false,
+          "displayName": "App name"
+        }
+      },
+      "metadata": {
+        "ActivityName": "Review bank details",
+        "BindingsVersion": "2.2",
+        "DisplayLabel": "name",
+        "SolutionsSupport": "true"
+      }
+    }
+  ]
 }

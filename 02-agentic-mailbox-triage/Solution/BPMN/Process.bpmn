@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:uipath="http://uipath.org/schema/bpmn" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" id="x-uipath-initial-diagram" targetNamespace="http://www.omg.org/spec/BPMN/20100524/MODEL" exporter="UiPath Studio Web (https://uipath.com)" exporterVersion="0b45e297">
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:uipath="http://uipath.org/schema/bpmn" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" id="x-uipath-initial-diagram" targetNamespace="http://www.omg.org/spec/BPMN/20100524/MODEL" exporter="UiPath Studio Web (https://uipath.com)" exporterVersion="0b45e297">
   <bpmn:process id="Process_1" name="Process" isExecutable="false">
     <bpmn:extensionElements>
+      <uipath:variables version="v1">
+        <uipath:inputOutput id="error" name="Error" type="jsonSchema" elementId="Activity_7FmkhG"><![CDATA[{"type":"object","properties":{"code":{"type":"string"},"message":{"type":"string"},"detail":{"type":"string"},"category":{"type":"string"},"status":{"type":"number"},"element":{"type":"string"}}}]]></uipath:inputOutput>
+        <uipath:inputOutput id="comment" name="Comment" type="string" elementId="Activity_7FmkhG" />
+        <uipath:inputOutput id="action" name="Action" type="string" elementId="Activity_7FmkhG" />
+        <uipath:inputOutput id="hitlTask" name="hitlTask" type="jsonSchema" elementId="Activity_7FmkhG"><![CDATA[{"type":"object","displayName":"All Task Properties","properties":{"Id":{"type":"integer","description":"Task identifier"},"Key":{"type":"string","description":"Unique task identifier (UUID)"},"Title":{"type":"string","description":"Task title"},"Status":{"type":"string","description":"Task status: Unassigned, Pending, or Completed"},"Action":{"type":"string","description":"Action taken on the task"},"ActionLabel":{"type":"string","description":"Action display label"},"Priority":{"type":"string","description":"Task priority: Low, Medium, High, or Critical"},"Type":{"type":"string","description":"Task type (e.g. FormTask, AppTask, QuickFormTask)"},"Data":{"type":"object","description":"Task form field values"},"CompletedByUser":{"type":"object","description":"User who completed the task","properties":{"Id":{"type":"integer"},"Name":{"type":"string"},"Surname":{"type":"string"},"UserName":{"type":"string"},"EmailAddress":{"type":"string"},"DisplayName":{"type":"string"},"Type":{"type":"string","description":"User, Robot, DirectoryUser, DirectoryGroup, DirectoryRobot, or DirectoryExternalApplication"},"AuthenticationSource":{"type":"string"}}},"AssignedToUser":{"type":"object","description":"User currently assigned to the task","properties":{"Id":{"type":"integer"},"Name":{"type":"string"},"Surname":{"type":"string"},"UserName":{"type":"string"},"EmailAddress":{"type":"string"},"DisplayName":{"type":"string"},"Type":{"type":"string","description":"User, Robot, DirectoryUser, DirectoryGroup, DirectoryRobot, or DirectoryExternalApplication"},"AuthenticationSource":{"type":"string"}}},"AssignedToUserId":{"type":"integer","description":"ID of the assigned user"},"TaskAssignmentCriteria":{"type":"string","description":"Assignment criteria: SingleUser, Workload, AllUsers, RoundRobin, or Hierarchy"},"TaskAssignees":{"type":"array","description":"List of users assigned to the task","items":{"type":"object","properties":{"Id":{"type":"integer"},"Name":{"type":"string"},"Surname":{"type":"string"},"UserName":{"type":"string"},"EmailAddress":{"type":"string"},"DisplayName":{"type":"string"},"Type":{"type":"string","description":"User, Robot, DirectoryUser, DirectoryGroup, DirectoryRobot, or DirectoryExternalApplication"},"AuthenticationSource":{"type":"string"}}}},"CompletionTime":{"type":"string","description":"Task completion timestamp"},"CreationTime":{"type":"string","description":"Task creation timestamp"},"LastModificationTime":{"type":"string","description":"Last modification timestamp"},"LastAssignedTime":{"type":"string","description":"Last assignment timestamp"},"OrganizationUnitId":{"type":"integer","description":"Folder/organization unit ID"},"OrganizationUnitFullyQualifiedName":{"type":"string","description":"Fully qualified folder name"},"ParentOperationId":{"type":"string","description":"Operation ID that created this task"},"CreatorJobKey":{"type":"string","description":"Key of the job that created this task (UUID)"},"ExternalTag":{"type":"string","description":"External system identifier"},"ProcessingTime":{"type":"integer","description":"Time spent in assigned state"},"WaitJobState":{"type":"string","description":"State of the waiting job"},"WaitJobKey":{"type":"string","description":"Key of the waiting job (UUID)"},"TaskSchemaKey":{"type":"string","description":"Schema key for QuickFormTask (UUID)"},"IsDeleted":{"type":"boolean"},"IsCurrentUserInAllUserAssignedGroup":{"type":"boolean"},"CreatorUserId":{"type":"integer","description":"ID of the user who created the task"},"LastModifierUserId":{"type":"integer","description":"ID of the last user to modify the task"},"DeleterUserId":{"type":"integer"},"DeletionTime":{"type":"string"},"Tags":{"type":"array","description":"Tags associated to the task","items":{"type":"object","properties":{"Name":{"type":"string"},"DisplayName":{"type":"string"},"Value":{"type":"string"},"DisplayValue":{"type":"string"}}}},"TaskDefinitionPropertiesId":{"type":"integer","description":"Task definition properties ID"},"AppTasksMetadata":{"type":"object","description":"App task metadata","properties":{"Id":{"type":"integer"},"AppId":{"type":"string","description":"Associated App ID"},"AppVersion":{"type":"integer","description":"Associated App version"},"AppProcessKey":{"type":"string","description":"App process key (UUID)"},"FolderKey":{"type":"string","description":"Folder key (UUID)"},"Runtime":{"type":"string","description":"Serverless or Unattended"},"AppType":{"type":"string","description":"Custom or Dynamic"},"CreationTime":{"type":"string"},"CreatorUserId":{"type":"integer"},"CreatorUserKey":{"type":"string","description":"Creator user key (UUID)"}}},"TaskSlaDetails":{"type":"array","description":"Task SLA details","items":{"type":"object","properties":{"ExpiryTime":{"type":"string","description":"SLA expiry timestamp"},"StartCriteria":{"type":"string","description":"TaskCreated, TaskAssigned, or TaskCompleted"},"EndCriteria":{"type":"string","description":"TaskCreated, TaskAssigned, or TaskCompleted"},"Status":{"type":"string","description":"OverdueLater, OverdueSoon, Overdue, or CompletedInTime"}}}},"TaskSource":{"type":"object","description":"Task source information","properties":{"SourceName":{"type":"string","description":"Agent, Workflow, Maestro, CaseManagement, or Default"},"SourceId":{"type":"string"},"JobId":{"type":"string"}}}},"$schema":"http://json-schema.org/draft-07/schema#"}]]></uipath:inputOutput>
+      </uipath:variables>
+      <uipath:bindings version="v1">
+        <uipath:binding id="bL2QOBqyG" name="folderPath" type="string" resource="app" resourceKey="BankDetailsReview" propertyAttribute="folderPath" />
+        <uipath:binding id="bDS6iid8y" name="name" type="string" default="BankDetailsReview" resource="app" resourceKey="BankDetailsReview" propertyAttribute="name" />
+      </uipath:bindings>
       <uipath:migrationVersion version="21" />
       <uipath:intsvcActivityConfig version="v2" />
     </bpmn:extensionElements>
@@ -9,14 +19,72 @@
       <bpmn:extensionElements>
         <uipath:entryPointId value="4c6f64c1-0fef-4765-84b2-0432c8600237" />
       </bpmn:extensionElements>
+      <bpmn:outgoing>edge_MRXKuU</bpmn:outgoing>
     </bpmn:startEvent>
+    <bpmn:userTask id="Activity_7FmkhG" name="Review bank details">
+      <bpmn:extensionElements>
+        <uipath:tags>
+          <uipath:tag key="caseTaskType">action</uipath:tag>
+        </uipath:tags>
+        <uipath:activity version="v1">
+          <uipath:type value="Actions.HITL" version="v2" />
+          <uipath:context>
+            <uipath:input name="name" type="string" value="=bindings.bDS6iid8y" />
+            <uipath:input name="folderPath" type="string" value="=bindings.bL2QOBqyG" />
+            <uipath:input name="_label" type="string" value="BankDetailsReview" />
+            <uipath:input name="taskTitle" type="string" value="human bank review" required="true" />
+            <uipath:input name="assignmentCriteria" type="string" value="SingleUser" />
+            <uipath:input name="recipient" type="json" />
+            <uipath:input name="customAssignees" type="string" />
+            <uipath:input name="priority" type="string" value="Medium" />
+            <uipath:input name="labels" type="string" />
+            <uipath:input name="actionCatalogName" type="string" />
+            <uipath:input name="actionCatalogFolderPath" type="string" />
+            <uipath:input name="enableActionableNotifications" type="boolean" value="false" />
+            <uipath:inputSchema type="jsonSchema"><![CDATA[{"$schema":"http://json-schema.org/draft-07/schema#","type":"object","properties":{"MessageId":{"type":"string","title":"MessageId"},"ReceivedAt":{"type":"string","title":"ReceivedAt"},"From":{"type":"string","title":"From"},"Subject":{"type":"string","title":"Subject"},"BodyExcerpt":{"type":"string","title":"BodyExcerpt"},"Summary":{"type":"string","title":"Summary"},"RiskSignals":{"type":"string","title":"RiskSignals"},"VendorName":{"type":"string","title":"VendorName"},"VendorNip":{"type":"string","title":"VendorNip"},"CurrentIban":{"type":"string","title":"CurrentIban"},"NewIban":{"type":"string","title":"NewIban"},"IbanValid":{"type":"boolean","title":"IbanValid"},"SenderKnown":{"type":"boolean","title":"SenderKnown"},"WhiteListStatus":{"type":"string","title":"WhiteListStatus"},"IbanOnWhiteList":{"type":"string","title":"IbanOnWhiteList"},"WhiteListRequestId":{"type":"string","title":"WhiteListRequestId"},"RiskLevel":{"type":"string","title":"RiskLevel"},"RiskReasons":{"type":"string","title":"RiskReasons"},"Comment":{"type":"string","title":"Comment"}},"required":[]}]]></uipath:inputSchema>
+          </uipath:context>
+          <uipath:input name="HitlTaskArguments" type="json" target="bodyField"><![CDATA[{"MessageId":"\"1a214060e70174b5\"","ReceivedAt":"\"2026-11-25 19:45:10\"","From":"\"uibot778+orlen.finance@gmail.com\"","Subject":"\"PILNE: nowy rachunek bankowy\"","BodyExcerpt":"\"Prosimy o pilne przelewy na nowy rachunek. Prosimy nie dzwonić, księgowość jest w trakcie audytu.\"","Summary":"\"Sender claiming to be ORLEN urgently asks to pay to a new bank account and not to call.\"","RiskSignals":"\"Urgency; AccountChangeRequest; Secrecy; PaymentPressure\"","VendorName":"\"ORLEN\"","VendorNip":"\"7740001454\"","CurrentIban":"\"PL38124052821111001080047440\"","NewIban":"\"PL61109010140000071219812874\"","IbanValid":true,"SenderKnown":false,"WhiteListStatus":"\"Active\"","IbanOnWhiteList":"\"No\"","WhiteListRequestId":"\"pviEp-99cfah6;LhIHg-99cfah6\"","RiskLevel":"\"High\"","RiskReasons":"\"Sender uibot778+orlen.finance@gmail.com is not a known contact of ORLEN (vendor matched by name); New IBAN is not on the White List of ORLEN; Bank account change: PL38124052821111001080047440 -> PL61109010140000071219812874\"","Comment":null}]]></uipath:input>
+          <uipath:output name="Error" type="jsonSchema" source="=Error" var="error" />
+          <uipath:output name="Comment" type="string" source="=Comment" var="comment" />
+          <uipath:output name="Action" type="string" source="=Action" var="action" options="[{&#34;value&#34;:&#34;approve&#34;,&#34;label&#34;:&#34;approve&#34;},{&#34;value&#34;:&#34;reject&#34;,&#34;label&#34;:&#34;reject&#34;}]" />
+          <uipath:output name="hitlTask" type="jsonSchema" source="=hitlTask" var="hitlTask" />
+        </uipath:activity>
+      </bpmn:extensionElements>
+      <bpmn:incoming>edge_MRXKuU</bpmn:incoming>
+      <bpmn:outgoing>edge_GoSYTW</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:endEvent id="Event_4d51mk">
+      <bpmn:incoming>edge_GoSYTW</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="edge_MRXKuU" sourceRef="Event_start" targetRef="Activity_7FmkhG" />
+    <bpmn:sequenceFlow id="edge_GoSYTW" sourceRef="Activity_7FmkhG" targetRef="Event_4d51mk" />
   </bpmn:process>
   <bpmndi:BPMNDiagram id="BPMNDiagram_1">
     <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Process_1">
       <bpmndi:BPMNShape id="S_Event_start" bpmnElement="Event_start">
-        <dc:Bounds x="260" y="200" width="36" height="36" />
+        <dc:Bounds x="286" y="30" width="36" height="36" />
         <bpmndi:BPMNLabel>
-          <dc:Bounds x="260" y="241" width="36" height="14" />
+          <dc:Bounds x="286" y="71" width="36" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="BPMNEdge_edge_MRXKuU" bpmnElement="edge_MRXKuU">
+        <di:waypoint x="304" y="66" />
+        <di:waypoint x="304" y="168" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_edge_GoSYTW" bpmnElement="edge_GoSYTW">
+        <di:waypoint x="304" y="248" />
+        <di:waypoint x="304" y="350" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="S_Activity_7FmkhG" bpmnElement="Activity_7FmkhG">
+        <dc:Bounds x="254" y="168" width="100" height="80" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="254" y="253" width="100" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="S_Event_4d51mk" bpmnElement="Event_4d51mk">
+        <dc:Bounds x="286" y="350" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="286" y="391" width="36" height="14" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
     </bpmndi:BPMNPlane>

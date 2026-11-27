@@ -1,13 +1,107 @@
 {
-  "id": "9aa4d563-708f-4464-8362-32a692db67da",
   "version": "1.2.0",
-  "name": "MailboxTriageAgent",
+  "settings": {
+    "model": "gpt-5.4-mini-2026-03-17",
+    "maxTokens": 8192,
+    "temperature": 0,
+    "engine": "basic-v2",
+    "maxIterations": 5,
+    "mode": "standard"
+  },
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "from": {
+        "type": "string"
+      },
+      "subject": {
+        "type": "string"
+      },
+      "bodyText": {
+        "type": "string"
+      },
+      "attachmentNames": {
+        "type": "string"
+      },
+      "foundIbans": {
+        "type": "string"
+      }
+    }
+  },
+  "outputSchema": {
+    "type": "object",
+    "required": [
+      "emailClass",
+      "confidence",
+      "language",
+      "summary",
+      "entities",
+      "riskSignals"
+    ],
+    "properties": {
+      "emailClass": {
+        "type": "string"
+      },
+      "confidence": {
+        "type": "number"
+      },
+      "language": {
+        "type": "string"
+      },
+      "summary": {
+        "type": "string"
+      },
+      "entities": {
+        "type": "object",
+        "required": [
+          "vendorName",
+          "vendorNip",
+          "newIban",
+          "invoiceNumber",
+          "amount",
+          "currency",
+          "dueDate"
+        ],
+        "properties": {
+          "vendorName": {
+            "type": "string"
+          },
+          "vendorNip": {
+            "type": "string"
+          },
+          "newIban": {
+            "type": "string"
+          },
+          "invoiceNumber": {
+            "type": "string"
+          },
+          "amount": {
+            "type": "string"
+          },
+          "currency": {
+            "type": "string"
+          },
+          "dueDate": {
+            "type": "string"
+          }
+        }
+      },
+      "riskSignals": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      }
+    }
+  },
   "metadata": {
     "storageVersion": "50.0.0",
     "isConversational": false,
     "targetRuntime": "pythonAgent",
     "showProjectCreationExperience": false
   },
+  "type": "lowCode",
+  "guardrails": [],
   "messages": [
     {
       "role": "system",
@@ -70,102 +164,9 @@
       ]
     }
   ],
-  "inputSchema": {
-    "type": "object",
-    "properties": {
-      "from": {
-        "type": "string"
-      },
-      "subject": {
-        "type": "string"
-      },
-      "bodyText": {
-        "type": "string"
-      },
-      "attachmentNames": {
-        "type": "string"
-      },
-      "foundIbans": {
-        "type": "string"
-      }
-    },
-    "title": "Inputs"
-  },
-  "outputSchema": {
-    "type": "object",
-    "properties": {
-      "emailClass": {
-        "type": "string"
-      },
-      "confidence": {
-        "type": "number"
-      },
-      "language": {
-        "type": "string"
-      },
-      "summary": {
-        "type": "string"
-      },
-      "entities": {
-        "type": "object",
-        "properties": {
-          "vendorName": {
-            "type": "string"
-          },
-          "vendorNip": {
-            "type": "string"
-          },
-          "newIban": {
-            "type": "string"
-          },
-          "invoiceNumber": {
-            "type": "string"
-          },
-          "amount": {
-            "type": "string"
-          },
-          "currency": {
-            "type": "string"
-          },
-          "dueDate": {
-            "type": "string"
-          }
-        },
-        "required": [
-          "vendorName",
-          "vendorNip",
-          "newIban",
-          "invoiceNumber",
-          "amount",
-          "currency",
-          "dueDate"
-        ]
-      },
-      "riskSignals": {
-        "type": "array",
-        "items": {
-          "type": "string"
-        }
-      }
-    },
-    "required": [
-      "emailClass",
-      "confidence",
-      "language",
-      "summary",
-      "entities",
-      "riskSignals"
-    ]
-  },
-  "settings": {
-    "model": "gpt-5.4-mini-2026-03-17",
-    "maxTokens": 8192,
-    "temperature": 0,
-    "engine": "basic-v2",
-    "maxIterations": 5,
-    "mode": "standard"
-  },
-  "guardrails": [],
+  "projectId": "9aa4d563-708f-4464-8362-32a692db67da",
+  "id": "9aa4d563-708f-4464-8362-32a692db67da",
+  "name": "MailboxTriageAgent",
   "resources": [],
   "features": []
 }

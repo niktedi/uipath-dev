@@ -9,6 +9,11 @@
       "Id": "086e41c7-4d48-4a36-8bc5-9dba96458141"
     },
     {
+      "Type": "WebApp",
+      "ProjectRelativePath": "BankDetailsReview/project.uiproj",
+      "Id": "b3ca7419-069c-4ae3-aee1-57a8a11ab2ea"
+    },
+    {
       "Type": "ProcessOrchestration",
       "ProjectRelativePath": "BPMN/project.uiproj",
       "Id": "f2baba3e-730a-45f0-a985-4f6483e41e10"

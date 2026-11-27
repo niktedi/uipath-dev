@@ -1,0 +1,26 @@
+{
+  "docVersion": "1.0.0",
+  "resource": {
+    "name": "BankDetailsReview",
+    "kind": "package",
+    "apiVersion": "orchestrator.uipath.com/v1",
+    "projectKey": "b3ca7419-069c-4ae3-aee1-57a8a11ab2ea",
+    "isOverridable": true,
+    "dependencies": [],
+    "runtimeDependencies": [],
+    "files": [],
+    "folders": [
+      {
+        "fullyQualifiedName": "solution_folder"
+      }
+    ],
+    "spec": {
+      "fileName": null,
+      "fileReference": null,
+      "name": "BankDetailsReview",
+      "description": null
+    },
+    "locks": [],
+    "key": "1836171e-a2b2-46fb-b377-8095b9d7ffb9"
+  }
+}
