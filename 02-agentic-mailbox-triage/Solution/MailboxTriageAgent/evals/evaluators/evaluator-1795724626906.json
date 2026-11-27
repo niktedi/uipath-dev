@@ -1,0 +1,12 @@
+{
+  "fileName": "evaluator-1795724626906.json",
+  "id": "341d9046-d1d2-4bbe-9849-4cb2643da2e2",
+  "name": "ClassExact",
+  "description": "emailClass must match exactly",
+  "type": 1,
+  "category": 0,
+  "prompt": "",
+  "targetOutputKey": "emailClass",
+  "createdAt": "2026-11-26T20:23:46.907Z",
+  "updatedAt": "2026-11-26T20:25:12.555Z"
+}

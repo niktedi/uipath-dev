@@ -12,7 +12,7 @@
   "entitiesStores": [],
   "schemaVersion": "4.1",
   "studioVersion": "27.0.207.0",
-  "projectVersion": "0.2.1",
+  "projectVersion": "0.3.0",
   "runtimeOptions": {
     "autoDispose": false,
     "netFrameworkLazyLoading": false,
@@ -39,7 +39,8 @@
     },
     "processOptions": {
       "ignoredFiles": [
-        "Dev/ListApEmails.xaml"
+        "Dev/ListApEmails.xaml",
+        "Dev/TestCheckBankDetails.xaml"
       ]
     },
     "fileInfoCollection": [],

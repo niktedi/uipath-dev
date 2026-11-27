@@ -1,0 +1,12 @@
+{
+  "fileName": "evaluator-1795725073549.json",
+  "id": "5f7b6a6a-e59d-4fff-a60a-8c9c11c48594",
+  "name": "OutputJson",
+  "description": "Similarity of language, entities and riskSignals to the expected output",
+  "type": 6,
+  "category": 0,
+  "prompt": "",
+  "targetOutputKey": "language",
+  "createdAt": "2026-11-26T20:31:13.549Z",
+  "updatedAt": "2026-11-26T20:32:06.688Z"
+}

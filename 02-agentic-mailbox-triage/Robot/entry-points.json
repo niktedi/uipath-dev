@@ -19,6 +19,12 @@
           },
           "in_From": {
             "type": "string"
+          },
+          "in_MessageId": {
+            "type": "string"
+          },
+          "in_AgentVendorName": {
+            "type": "string"
           }
         },
         "required": []

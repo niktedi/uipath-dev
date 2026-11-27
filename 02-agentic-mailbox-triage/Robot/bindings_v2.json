@@ -2,6 +2,47 @@
   "version": "2.0",
   "resources": [
     {
+      "activityDisplayName": "Get Asset",
+      "activityId": "GetRobotAsset_1",
+      "resource": "asset",
+      "key": "uipath-dev.MT_VendorMasterSheetId",
+      "id": "assetuipath-dev.MT_VendorMasterSheetIduipath-devFalseMT_VendorMasterSheetIdFalse",
+      "value": {
+        "folderPath": {
+          "defaultValue": "uipath-dev",
+          "isExpression": false
+        },
+        "name": {
+          "defaultValue": "MT_VendorMasterSheetId",
+          "isExpression": false
+        }
+      },
+      "metadata": {
+        "BindingsVersion": "2.2"
+      }
+    },
+    {
+      "activityDisplayName": "SheetsReadTable",
+      "activityId": "SheetsReadTable_1",
+      "resource": "Connection",
+      "key": "9fa4a06e-cd40-4b26-adfe-8673ffea53c2SheetsReadTable",
+      "id": "Connection9fa4a06e-cd40-4b26-adfe-8673ffea53c2SheetsReadTable9fa4a06e-cd40-4b26-adfe-8673ffea53c2False",
+      "value": {
+        "ConnectionId": {
+          "defaultValue": "9fa4a06e-cd40-4b26-adfe-8673ffea53c2",
+          "isExpression": false,
+          "displayName": "uipath-google-sheets"
+        }
+      },
+      "metadata": {
+        "BindingsVersion": "2.2",
+        "UseConnectionService": "True",
+        "Connector": "uipath-google-sheets",
+        "CompilerActivityId": "ReadRangeConnections`1_2",
+        "CompilerActivityDisplayName": "Read Range"
+      }
+    },
+    {
       "activityDisplayName": "Get Email by ID",
       "activityId": "GetEmailByIdConnections_1",
       "resource": "Connection",
@@ -39,27 +80,6 @@
       },
       "metadata": {
         "BindingsVersion": "2.2"
-      }
-    },
-    {
-      "activityDisplayName": "SheetsReadTable",
-      "activityId": "SheetsReadTable_1",
-      "resource": "Connection",
-      "key": "9fa4a06e-cd40-4b26-adfe-8673ffea53c2SheetsReadTable",
-      "id": "Connection9fa4a06e-cd40-4b26-adfe-8673ffea53c2SheetsReadTable9fa4a06e-cd40-4b26-adfe-8673ffea53c2False",
-      "value": {
-        "ConnectionId": {
-          "defaultValue": "9fa4a06e-cd40-4b26-adfe-8673ffea53c2",
-          "isExpression": false,
-          "displayName": "uipath-google-sheets"
-        }
-      },
-      "metadata": {
-        "BindingsVersion": "2.2",
-        "UseConnectionService": "True",
-        "Connector": "uipath-google-sheets",
-        "CompilerActivityId": "ReadRangeConnections`1_2",
-        "CompilerActivityDisplayName": "Read Range"
       }
     },
     {
